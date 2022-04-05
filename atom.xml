@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>小超的网站</title>
+  <title>chaos超</title>
   
-  
+  <subtitle>努力成长，人生值得</subtitle>
   <link href="https://cxc66.github.io/atom.xml" rel="self"/>
   
   <link href="https://cxc66.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://cxc66.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>chaos小超</name>
     
   </author>
   
