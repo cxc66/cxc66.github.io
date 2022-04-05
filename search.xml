@@ -1,35 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>第一次博客文章测试</title>
+    <url>/2019/09/07/first/</url>
+    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p><strong>This is my first time to use Markdown</strong><br><em>第一次用文本编辑器写Markdown文档</em><br><del>这只是万里长征第一步</del> </p>
+<p><del>这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</del><br>但是，万事开头难 有了第一步，坚持下去，定有收获！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2019/09/05/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>第一次博客文章测试</title>
-    <url>/2019/09/07/newpapername/</url>
-    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p><strong>This is my first time to use Markdown</strong><br><em>第一次用文本编辑器写Markdown文档</em><br><del>这只是万里长征第一步</del> </p>
-<p><del>这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</del><br>但是，万事开头难 有了第一步，坚持下去，定有收获！</p>
+    <title>Java的三大特性</title>
+    <url>/2021/11/01/java00/</url>
+    <content><![CDATA[<h1 id="Java的三大特性"><a href="#Java的三大特性" class="headerlink" title="Java的三大特性"></a>Java的三大特性</h1><p><strong>Java的三大特性</strong><br><strong>封装:</strong> 隐藏内部功能的具体实现，只保留和外部交流数据的接口，将变化隔离，便于使用，提高复用性和安全性。例：汽车与发动机，不必知道发动机的实现原理，只需使用汽车给予的接口，插入钥匙。</p>
+<p><strong>继承:</strong> 一个对象可以从它的父类继承所有的通用的属性和方法，并在无需重新编写原来的类的情况下对这些功能进行扩展；最大的好处是实现代码的高效重用。</p>
+<ul>
+<li>关于继承如下 3 点请记住：*<br>1.子类拥有父类非 private 的属性和方法。<br>2.子类可以拥有自己属性和方法，即子类可以对父类进行扩展。<br>2.子类可以用自己的方式实现父类的方法。</li>
+</ul>
+<p><strong>多态:</strong> 所谓多态就是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。</p>
+<p>** 多态的实现**<br>  Java实现多态有三个必要条件：继承、重写、向上转型。</p>
+<p><em>1.继承：</em>在多态中必须存在有继承关系的子类和父类。</p>
+<p><em>2.重写：</em>子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。</p>
+<p><em>3.向上转型：</em>在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够具备技能调用父类的方法和子类的方法。</p>
+<p>只有满足了上述三个条件，我们才能够在同一个继承结构中使用统一的逻辑实现代码处理不同的对象，从而达到执行不同的行为。</p>
+<p>对于Java而言，它多态的实现机制遵循一个原则：当超类对象引用变量引用子类对象时，被引用对象的类型而不是引用变量的类型决定了调用谁的成员方法，但是这个被调用的方法必须是在超类中定义过的，也就是说被子类覆盖的方法。</p>
+<p><strong>重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？</strong><br>方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。</p>
+<p><em>重载：</em>发生在同一个类中，方法名相同参数列表不同（参数类型不同、个数不同、顺序不同），与方法返回值和访问修饰符无关，即重载的方法不能根据返回类型进行区分</p>
+<p><em>重写：</em>发生在父子类中，方法名、参数列表必须相同，返回值小于等于父类，抛出的异常小于等于父类，访问修饰符大于等于父类（里氏代换原则）；如果父类方法访问修饰符为private则子类中就不是重写。</p>
 ]]></content>
       <categories>
-        <category>Markdown</category>
+        <category>JAVA</category>
       </categories>
       <tags>
-        <tag>Typora</tag>
-        <tag>Markdown</tag>
+        <tag>JAVA基础</tag>
+        <tag>JAVA面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ArrayList 和 LinkedList 的区别是什么？</title>
+    <url>/2021/10/07/java01/</url>
+    <content><![CDATA[<h1 id="ArrayList-和-LinkedList-的区别是什么？"><a href="#ArrayList-和-LinkedList-的区别是什么？" class="headerlink" title="ArrayList 和 LinkedList 的区别是什么？"></a>ArrayList 和 LinkedList 的区别是什么？</h1><p><strong>说一下 ArrayList 的优缺点</strong><br><em>ArrayList的优点如下：</em><br>   ArrayList 底层以数组实现，是一种随机访问模式。ArrayList 实现了RandomAccess 接口，因此查找的时候非常快。<br>   ArrayList 在顺序添加一个元素的时候非常方便。</p>
+<p><em>ArrayList 的缺点如下：</em><br>   删除元素的时候，需要做一次元素复制操作。如果要复制的元素很多，那么就会比较耗费性能。<br>   插入元素的时候，也需要做一次元素复制操作，缺点同上。<br>ArrayList 比较适合顺序添加、随机访问的场景。</p>
+<p><strong>ArrayList 和 LinkedList 的区别是什么？</strong><br><em>数据结构实现：</em>ArrayList 是动态数组的数据结构实现，而LinkedList 是双向链表的数据结构实现。</p>
+<p><em>随机访问效率：</em>ArrayList 比 LinkedList 在随机访问的时候效率要高，因为 LinkedList 是线性的数据存储方式，所以需要移动指针从前往后依次查找。</p>
+<p><em>增加和删除效率：</em>在非首尾的增加和删除操作，LinkedList 要比 ArrayList 效率要高，因为 ArrayList 增删操作要影响数组内的其他数据的下标。</p>
+<p><em>内存空间占用：</em>LinkedList 比 ArrayList 更占内存，因为 LinkedList 的节点除了存储数据，还存储了两个引用，一个指向前一个元素，一个指向后一个元素。</p>
+<p><em>线程安全：</em>ArrayList 和 LinkedList 都是不同步的，也就是不保证线程安全；<br>综合来说，在需要频繁读取集合中的元素时，更推荐使用 ArrayList，而在插入和删除操作较多时，更推荐使用 LinkedList。</p>
+<p>LinkedList 的双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA面试题</tag>
+        <tag>JAVA集合框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>== 和 equals 的区别是什么</title>
+    <url>/2021/12/21/java02/</url>
+    <content><![CDATA[<h1 id="x3D-x3D-和-equals-的区别是什么？"><a href="#x3D-x3D-和-equals-的区别是什么？" class="headerlink" title="== 和 equals 的区别是什么？"></a>== 和 equals 的区别是什么？</h1><p>**== : ** 它的作用是判断两个对象的地址是不是相等。即，判断两个对象是不是同一个对象。(基本数据类型 == 比较的是值，引用数据类型 == 比较的是内存地址)</p>
+<p><strong>equals() :</strong> 它的作用也是判断两个对象是否相等。但它一般有两种使用情况：</p>
+<p>情况1：类没有覆盖 equals() 方法。则通过 equals() 比较该类的两个对象时，等价于通过“==”比较这两个对象。</p>
+<p>情况2：类覆盖了 equals() 方法。一般，我们都覆盖 equals() 方法来两个对象的内容相等；若它们的内容相等，则返回 true (即，认为这两个对象相等)。</p>
+<pre><code>public class test1 {
+    public static void main(String[] args) {
+        String a = new String("ab"); // a 为一个引用
+        String b = new String("ab"); // b为另一个引用,对象的内容一样
+        String aa = "ab"; // 放在常量池中
+        String bb = "ab"; // 从常量池中查找
+        if (aa == bb) // true
+            System.out.println("aa==bb");
+        if (a == b) // false，非同一对象
+            System.out.println("a==b");
+        if (a.equals(b)) // true
+            System.out.println("aEQb");
+        if (42 == 42.0) { // true
+            System.out.println("true");
+        }
+    }
+}
+</code></pre>
+<p><em>说明：</em></p>
+<p>String中的equals方法是被重写过的，因为object的equals方法是比较的对象的内存地址，而String的equals方法比较的是对象的值。<br>当创建String类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个String对象。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA面试题</tag>
+        <tag>JAVA集合框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库事务与脏读幻读</title>
+    <url>/2021/10/08/mysql01-fu-ben/</url>
+    <content><![CDATA[<h1 id="什么是数据库事务？"><a href="#什么是数据库事务？" class="headerlink" title="什么是数据库事务？"></a>什么是数据库事务？</h1><p><strong>说一下什么是数据库事务</strong><br>   事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。</p>
+<p><strong>事物的四大特性(ACID)介绍一下?</strong><br><em>原子性：</em> 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；<br><em>一致性：</em> 执行事务前后，数据保持一致，多个事务对同一个数据读取的结果是相同的；<br><em>隔离性：</em> 并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；<br><em>持久性：</em> 一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。</p>
+<p><strong>什么是脏读？幻读？不可重复读？</strong><br><strong>脏读(Drity Read)：</strong> 某个事务已更新一份数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个RollBack了操作，则后一个事务所读取的数据就会是不正确的。<br><strong>不可重复读(Non-repeatable read):</strong> 在一个事务的两次查询之中数据不一致，这可能是两次查询过程中间插入了一个事务更新的原有的数据。<br><strong>幻读(Phantom Read):</strong> 在一个事务的两次查询中数据笔数不一致，例如有一个事务查询了几列(Row)数据，而另一个事务却在此时插入了新的几列数据，先前的事务在接下来的查询中，就会发现有几列数据是它先前所没有的。</p>
+<p><strong>什么是事务的隔离级别？MySQL的默认隔离级别是什么？</strong><br>为了达到事务的四大特性，数据库定义了4种不同的事务隔离级别，由低到高依次为Read uncommitted、Read committed、Repeatable read、Serializable，这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
+<p><strong>SQL 标准定义了四个隔离级别：</strong><br><strong>READ-UNCOMMITTED(读取未提交)：</strong> 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读。<br><strong>READ-COMMITTED(读取已提交)：</strong> 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生。<br><strong>REPEATABLE-READ(可重复读)：</strong> 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。<br><strong>SERIALIZABLE(可串行化)：</strong> 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA面试题</tag>
+        <tag>mysql数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库事务与脏读幻读</title>
+    <url>/2021/10/08/mysql01/</url>
+    <content><![CDATA[<h1 id="什么是数据库事务？"><a href="#什么是数据库事务？" class="headerlink" title="什么是数据库事务？"></a>什么是数据库事务？</h1><p><strong>说一下什么是数据库事务</strong><br>   事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。</p>
+<p><strong>事物的四大特性(ACID)介绍一下?</strong><br><em>原子性：</em> 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；<br><em>一致性：</em> 执行事务前后，数据保持一致，多个事务对同一个数据读取的结果是相同的；<br><em>隔离性：</em> 并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；<br><em>持久性：</em> 一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。</p>
+<p><strong>什么是脏读？幻读？不可重复读？</strong><br><strong>脏读(Drity Read)：</strong> 某个事务已更新一份数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个RollBack了操作，则后一个事务所读取的数据就会是不正确的。<br><strong>不可重复读(Non-repeatable read):</strong> 在一个事务的两次查询之中数据不一致，这可能是两次查询过程中间插入了一个事务更新的原有的数据。<br><strong>幻读(Phantom Read):</strong> 在一个事务的两次查询中数据笔数不一致，例如有一个事务查询了几列(Row)数据，而另一个事务却在此时插入了新的几列数据，先前的事务在接下来的查询中，就会发现有几列数据是它先前所没有的。</p>
+<p><strong>什么是事务的隔离级别？MySQL的默认隔离级别是什么？</strong><br>为了达到事务的四大特性，数据库定义了4种不同的事务隔离级别，由低到高依次为Read uncommitted、Read committed、Repeatable read、Serializable，这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
+<p><strong>SQL 标准定义了四个隔离级别：</strong><br><strong>READ-UNCOMMITTED(读取未提交)：</strong> 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读。<br><strong>READ-COMMITTED(读取已提交)：</strong> 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生。<br><strong>REPEATABLE-READ(可重复读)：</strong> 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。<br><strong>SERIALIZABLE(可串行化)：</strong> 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA面试题</tag>
+        <tag>mysql数据库</tag>
       </tags>
   </entry>
 </search>
