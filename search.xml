@@ -8,41 +8,23 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2019/09/05/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Java的三大特性</title>
     <url>/2021/11/01/java00/</url>
-    <content><![CDATA[<h1 id="Java的三大特性"><a href="#Java的三大特性" class="headerlink" title="Java的三大特性"></a>Java的三大特性</h1><p><strong>Java的三大特性</strong><br><strong>封装:</strong> 隐藏内部功能的具体实现，只保留和外部交流数据的接口，将变化隔离，便于使用，提高复用性和安全性。例：汽车与发动机，不必知道发动机的实现原理，只需使用汽车给予的接口，插入钥匙。</p>
+    <content><![CDATA[<h1 id="Java的三大特性"><a href="#Java的三大特性" class="headerlink" title="Java的三大特性"></a>Java的三大特性</h1><h2 id="Java的三大特性-1"><a href="#Java的三大特性-1" class="headerlink" title="Java的三大特性"></a>Java的三大特性</h2><p><strong>封装:</strong> 隐藏内部功能的具体实现，只保留和外部交流数据的接口，将变化隔离，便于使用，提高复用性和安全性。例：汽车与发动机，不必知道发动机的实现原理，只需使用汽车给予的接口，插入钥匙。</p>
 <p><strong>继承:</strong> 一个对象可以从它的父类继承所有的通用的属性和方法，并在无需重新编写原来的类的情况下对这些功能进行扩展；最大的好处是实现代码的高效重用。</p>
 <ul>
-<li>关于继承如下 3 点请记住：*<br>1.子类拥有父类非 private 的属性和方法。<br>2.子类可以拥有自己属性和方法，即子类可以对父类进行扩展。<br>2.子类可以用自己的方式实现父类的方法。</li>
+<li>关于继承如下3点请记住：<br>　　１.子类拥有父类非 private 的属性和方法。<br>　　２.子类可以拥有自己属性和方法，即子类可以对父类进行扩展。<br>　　３.子类可以用自己的方式实现父类的方法。</li>
 </ul>
 <p><strong>多态:</strong> 所谓多态就是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。</p>
-<p>** 多态的实现**<br>  Java实现多态有三个必要条件：继承、重写、向上转型。</p>
-<p><em>1.继承：</em>在多态中必须存在有继承关系的子类和父类。</p>
-<p><em>2.重写：</em>子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。</p>
-<p><em>3.向上转型：</em>在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够具备技能调用父类的方法和子类的方法。</p>
+<h2 id="多态的实现"><a href="#多态的实现" class="headerlink" title="多态的实现"></a>多态的实现</h2><p>  Java实现多态有三个必要条件：<em>继承、重写、向上转型</em>。</p>
+<p><strong>1.继承：</strong>在多态中必须存在有继承关系的子类和父类。</p>
+<p><strong>2.重写：</strong>子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。</p>
+<p><strong>3.向上转型：</strong>在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够具备技能调用父类的方法和子类的方法。</p>
 <p>只有满足了上述三个条件，我们才能够在同一个继承结构中使用统一的逻辑实现代码处理不同的对象，从而达到执行不同的行为。</p>
 <p>对于Java而言，它多态的实现机制遵循一个原则：当超类对象引用变量引用子类对象时，被引用对象的类型而不是引用变量的类型决定了调用谁的成员方法，但是这个被调用的方法必须是在超类中定义过的，也就是说被子类覆盖的方法。</p>
-<p><strong>重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？</strong><br>方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。</p>
-<p><em>重载：</em>发生在同一个类中，方法名相同参数列表不同（参数类型不同、个数不同、顺序不同），与方法返回值和访问修饰符无关，即重载的方法不能根据返回类型进行区分</p>
-<p><em>重写：</em>发生在父子类中，方法名、参数列表必须相同，返回值小于等于父类，抛出的异常小于等于父类，访问修饰符大于等于父类（里氏代换原则）；如果父类方法访问修饰符为private则子类中就不是重写。</p>
+<h2 id="重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？"><a href="#重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？" class="headerlink" title="重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？"></a>重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？</h2><p>方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。</p>
+<p><strong>重载：</strong>发生在同一个类中，方法名相同参数列表不同（参数类型不同、个数不同、顺序不同），与方法返回值和访问修饰符无关，即重载的方法不能根据返回类型进行区分</p>
+<p><strong>重写：</strong>发生在父子类中，方法名、参数列表必须相同，返回值小于等于父类，抛出的异常小于等于父类，访问修饰符大于等于父类（里氏代换原则）；如果父类方法访问修饰符为private则子类中就不是重写。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -70,6 +52,93 @@
       <tags>
         <tag>JAVA面试题</tag>
         <tag>JAVA集合框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java多线程</title>
+    <url>/2022/01/02/java03/</url>
+    <content><![CDATA[<h1 id="什么是多线程"><a href="#什么是多线程" class="headerlink" title="什么是多线程"></a>什么是多线程</h1><p><strong>多线程:</strong> 多线程是指程序中包含多个执行流，即在-个程序中可以同时运行多个不同的线程来执行不同的任务。</p>
+<p><strong>多线程的好处:</strong> 可以提高 CPU 的利用率。在多线程程序中，一个线程必须等待的时候，CPU 可以运行其它的线程而不是等待，这样就大大提高了程序的效率。也就是说允许单个程序创建多个并行执行的线程来完成各自的任务。</p>
+<p><strong>多线程的劣势：</strong> 1.线程也是程序，所以线程需要占用内存，线程越多占用内存也越多；2.多线程需要协调和管理，所以需要 CPU 时间跟踪线程；3.线程之间对共享资源的访问会相互影响，必须解决竞用共享资源的问题。</p>
+<h1 id="线程和进程区别"><a href="#线程和进程区别" class="headerlink" title="线程和进程区别"></a>线程和进程区别</h1><h2 id="什么是线程和进程"><a href="#什么是线程和进程" class="headerlink" title="什么是线程和进程?"></a>什么是线程和进程?</h2><p> <strong>进程：</strong>是程序的一次执行，是具有一定独立功能的程序关于某个数据集合上的一次运动活动，是操作系统资源分配和调度的最小单位。</p>
+<p><strong>线程：</strong>是操作系统能够进行运算调度的最小单位，它包含在进程之中，是进程中实际运作单位。</p>
+<p><strong>两者关系：</strong> 进程是指程序执行时的一个实例，线程是进程的一个实体；线程必定也只属于一个进程，而进程可以拥有多个线程而且至少拥有一个线程；多个线程可共享数据。</p>
+<h2 id="线程和进程的区别"><a href="#线程和进程的区别" class="headerlink" title="线程和进程的区别"></a>线程和进程的区别</h2><p><strong>进程：</strong><br>    - 拥有独立的堆栈空间和数据段，系统开销大<br>    - 由于进程之间是独立的特点 使得进程的安全性比较高 有独立的地址空间 一个进程崩溃 不影响其他进程<br>    - 进程的通信机制相对复杂 譬如管道、信号、消息队列、套接字等<br><strong>线程：</strong><br>    - 线程拥有独立的堆栈空间 但是共享数据段，它们彼此之间使用相同的地址空间，比进程开销小<br>    - 线程是一个进程中不同的执行路径 一个线程的死亡就等于整个进程的死亡。<br>    - 通信相对方便</p>
+<p>线程具有许多传统进程所具有的特征，故又称为轻型进程(Light—Weight Process)或进程元；而把传统的进程称为重型进程(Heavy—Weight Process)，它相当于只有一个线程的任务。在引入了线程的操作系统中，通常一个进程都有若干个线程，至少包含一个线程。</p>
+<p><strong>根本区别：</strong> 进程是操作系统资源分配的基本单位，而线程是处理器任务调度和执行的基本单位</p>
+<p><strong>资源开销：</strong> 每个进程都有独立的代码和数据空间（程序上下文），程序之间的切换会有较大的开销；线程可以看做轻量级的进程，同一类线程共享代码和数据空间，每个线程都有自己独立的运行栈和程序计数器（PC），线程之间切换的开销小。</p>
+<p><strong>包含关系：</strong> 如果一个进程内有多个线程，则执行过程不是一条线的，而是多条线（线程）共同完成的；线程是进程的一部分，所以线程也被称为轻权进程或者轻量级进程。</p>
+<p><strong>内存分配：</strong> 同一进程的线程共享本进程的地址空间和资源，而进程之间的地址空间和资源是相互独立的</p>
+<p><strong>影响关系：</strong> 一个进程崩溃后，在保护模式下不会对其他进程产生影响，但是一个线程崩溃整个进程都死掉。所以多进程要比多线程健壮。</p>
+<p><strong>执行过程：</strong> 每个独立的进程有程序运行的入口、顺序执行序列和程序出口。但是线程不能独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制，两者均可并发执行</p>
+<h2 id="创建线程的四种方式"><a href="#创建线程的四种方式" class="headerlink" title="创建线程的四种方式"></a>创建线程的四种方式</h2><ul>
+<li><p>继承 Thread 类；</p>
+<pre><code>  public class MyThread extends Thread {
+  @Override
+  public void run() {
+      System.out.println(Thread.currentThread().getName() + " run()方法正在执行...");
+  }
+</code></pre>
+</li>
+<li><p>实现 Runnable 接口；</p>
+<pre><code>  public class MyRunnable implements Runnable {
+  @Override
+  public void run() {
+      System.out.println(Thread.currentThread().getName() + " run()方法执行中...");
+  }
+</code></pre>
+</li>
+<li><p>实现 Callable 接口；</p>
+<pre><code>      public class MyCallable implements Callable&lt;Integer&gt; {
+      @Override
+      public Integer call() {
+          System.out.println(Thread.currentThread().getName() + " call()方法执行中...");
+          return 1;
+      }
+</code></pre>
+</li>
+<li><p>使用匿名内部类方式。</p>
+<pre><code>  public class CreateRunnable {
+  public static void main(String[] args) {
+  //创建多线程创建开始
+      Thread thread = new Thread(new Runnable() {
+          public void run() {
+              for (int i = 0; i &lt; 10; i++) 
+              {
+                  System.out.println("i:" + i);
+              }
+          }
+      });
+  thread.start();
+  }
+  }
+</code></pre>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA面试题</tag>
+        <tag>JAVA多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库事务与脏读幻读</title>
+    <url>/2021/10/08/mysql01/</url>
+    <content><![CDATA[<h1 id="什么是数据库事务？"><a href="#什么是数据库事务？" class="headerlink" title="什么是数据库事务？"></a>什么是数据库事务？</h1><p><strong>说一下什么是数据库事务</strong><br>   事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。</p>
+<p><strong>事物的四大特性(ACID)介绍一下?</strong><br><em>原子性：</em> 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；<br><em>一致性：</em> 执行事务前后，数据保持一致，多个事务对同一个数据读取的结果是相同的；<br><em>隔离性：</em> 并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；<br><em>持久性：</em> 一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。</p>
+<p><strong>什么是脏读？幻读？不可重复读？</strong><br><strong>脏读(Drity Read)：</strong> 某个事务已更新一份数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个RollBack了操作，则后一个事务所读取的数据就会是不正确的。<br><strong>不可重复读(Non-repeatable read):</strong> 在一个事务的两次查询之中数据不一致，这可能是两次查询过程中间插入了一个事务更新的原有的数据。<br><strong>幻读(Phantom Read):</strong> 在一个事务的两次查询中数据笔数不一致，例如有一个事务查询了几列(Row)数据，而另一个事务却在此时插入了新的几列数据，先前的事务在接下来的查询中，就会发现有几列数据是它先前所没有的。</p>
+<p><strong>什么是事务的隔离级别？MySQL的默认隔离级别是什么？</strong><br>为了达到事务的四大特性，数据库定义了4种不同的事务隔离级别，由低到高依次为Read uncommitted、Read committed、Repeatable read、Serializable，这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
+<p><strong>SQL 标准定义了四个隔离级别：</strong><br><strong>READ-UNCOMMITTED(读取未提交)：</strong> 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读。<br><strong>READ-COMMITTED(读取已提交)：</strong> 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生。<br><strong>REPEATABLE-READ(可重复读)：</strong> 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。<br><strong>SERIALIZABLE(可串行化)：</strong> 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA面试题</tag>
+        <tag>mysql数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -104,42 +173,49 @@
         <category>JAVA</category>
       </categories>
       <tags>
+        <tag>JAVA基础</tag>
         <tag>JAVA面试题</tag>
-        <tag>JAVA集合框架</tag>
       </tags>
   </entry>
   <entry>
-    <title>数据库事务与脏读幻读</title>
-    <url>/2021/10/08/mysql01-fu-ben/</url>
-    <content><![CDATA[<h1 id="什么是数据库事务？"><a href="#什么是数据库事务？" class="headerlink" title="什么是数据库事务？"></a>什么是数据库事务？</h1><p><strong>说一下什么是数据库事务</strong><br>   事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。</p>
-<p><strong>事物的四大特性(ACID)介绍一下?</strong><br><em>原子性：</em> 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；<br><em>一致性：</em> 执行事务前后，数据保持一致，多个事务对同一个数据读取的结果是相同的；<br><em>隔离性：</em> 并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；<br><em>持久性：</em> 一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。</p>
-<p><strong>什么是脏读？幻读？不可重复读？</strong><br><strong>脏读(Drity Read)：</strong> 某个事务已更新一份数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个RollBack了操作，则后一个事务所读取的数据就会是不正确的。<br><strong>不可重复读(Non-repeatable read):</strong> 在一个事务的两次查询之中数据不一致，这可能是两次查询过程中间插入了一个事务更新的原有的数据。<br><strong>幻读(Phantom Read):</strong> 在一个事务的两次查询中数据笔数不一致，例如有一个事务查询了几列(Row)数据，而另一个事务却在此时插入了新的几列数据，先前的事务在接下来的查询中，就会发现有几列数据是它先前所没有的。</p>
-<p><strong>什么是事务的隔离级别？MySQL的默认隔离级别是什么？</strong><br>为了达到事务的四大特性，数据库定义了4种不同的事务隔离级别，由低到高依次为Read uncommitted、Read committed、Repeatable read、Serializable，这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
-<p><strong>SQL 标准定义了四个隔离级别：</strong><br><strong>READ-UNCOMMITTED(读取未提交)：</strong> 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读。<br><strong>READ-COMMITTED(读取已提交)：</strong> 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生。<br><strong>REPEATABLE-READ(可重复读)：</strong> 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。<br><strong>SERIALIZABLE(可串行化)：</strong> 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。</p>
+    <title>梦奇</title>
+    <url>/2022/04/02/meng-qi/</url>
+    <content><![CDATA[<h1 id="什么是梦奇？"><a href="#什么是梦奇？" class="headerlink" title="什么是梦奇？"></a>什么是梦奇？</h1><p>梦奇是一个人，一个女孩子</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
       </categories>
       <tags>
         <tag>JAVA面试题</tag>
-        <tag>mysql数据库</tag>
+        <tag>JAVA多线程</tag>
       </tags>
   </entry>
   <entry>
-    <title>数据库事务与脏读幻读</title>
-    <url>/2021/10/08/mysql01/</url>
-    <content><![CDATA[<h1 id="什么是数据库事务？"><a href="#什么是数据库事务？" class="headerlink" title="什么是数据库事务？"></a>什么是数据库事务？</h1><p><strong>说一下什么是数据库事务</strong><br>   事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。</p>
-<p><strong>事物的四大特性(ACID)介绍一下?</strong><br><em>原子性：</em> 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；<br><em>一致性：</em> 执行事务前后，数据保持一致，多个事务对同一个数据读取的结果是相同的；<br><em>隔离性：</em> 并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；<br><em>持久性：</em> 一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。</p>
-<p><strong>什么是脏读？幻读？不可重复读？</strong><br><strong>脏读(Drity Read)：</strong> 某个事务已更新一份数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个RollBack了操作，则后一个事务所读取的数据就会是不正确的。<br><strong>不可重复读(Non-repeatable read):</strong> 在一个事务的两次查询之中数据不一致，这可能是两次查询过程中间插入了一个事务更新的原有的数据。<br><strong>幻读(Phantom Read):</strong> 在一个事务的两次查询中数据笔数不一致，例如有一个事务查询了几列(Row)数据，而另一个事务却在此时插入了新的几列数据，先前的事务在接下来的查询中，就会发现有几列数据是它先前所没有的。</p>
-<p><strong>什么是事务的隔离级别？MySQL的默认隔离级别是什么？</strong><br>为了达到事务的四大特性，数据库定义了4种不同的事务隔离级别，由低到高依次为Read uncommitted、Read committed、Repeatable read、Serializable，这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
-<p><strong>SQL 标准定义了四个隔离级别：</strong><br><strong>READ-UNCOMMITTED(读取未提交)：</strong> 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读。<br><strong>READ-COMMITTED(读取已提交)：</strong> 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生。<br><strong>REPEATABLE-READ(可重复读)：</strong> 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。<br><strong>SERIALIZABLE(可串行化)：</strong> 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。</p>
+    <title>java线程池</title>
+    <url>/2022/01/21/java04/</url>
+    <content><![CDATA[<h1 id="什么是线程池？"><a href="#什么是线程池？" class="headerlink" title="什么是线程池？"></a>什么是线程池？</h1><p>Java中的线程池是运用场景最多的并发框架，几乎所有需要异步或并发执行任务的程序都可以使用线程池。在开发过程中，合理地使用线程池能够带来许多好处。</p>
+<ul>
+<li>降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</li>
+<li>提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。</li>
+<li>提高线程的可管理性。线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控。但是，要做到合理利用</li>
+</ul>
+<h1 id="线程池作用？"><a href="#线程池作用？" class="headerlink" title="线程池作用？"></a>线程池作用？</h1><ul>
+<li><p>降低资源消耗：重用存在的线程，减少对象创建销毁的开销。</p>
+</li>
+<li><p>提高响应速度。可有效的控制最大并发线程数，提高系统资源的使用率，同时避免过多资源竞争，避免堵塞。当任务到达时，任务可以不需要的等到线程创建就能立即执行。</p>
+</li>
+<li><p>提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。</p>
+</li>
+<li><p>附加功能：提供定时执行、定期执行、单线程、并发数控制等功能。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>JAVA</category>
       </categories>
       <tags>
         <tag>JAVA面试题</tag>
-        <tag>mysql数据库</tag>
+        <tag>JAVA多线程</tag>
       </tags>
   </entry>
 </search>

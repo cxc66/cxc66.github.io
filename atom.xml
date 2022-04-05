@@ -6,7 +6,7 @@
   <link href="https://cxc66.github.io/atom.xml" rel="self"/>
   
   <link href="https://cxc66.github.io/"/>
-  <updated>2022-04-05T10:54:02.289Z</updated>
+  <updated>2022-04-05T12:05:41.466Z</updated>
   <id>https://cxc66.github.io/</id>
   
   <author>
@@ -17,11 +17,92 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>梦奇</title>
+    <link href="https://cxc66.github.io/2022/04/02/meng-qi/"/>
+    <id>https://cxc66.github.io/2022/04/02/meng-qi/</id>
+    <published>2022-04-02T15:25:45.000Z</published>
+    <updated>2022-04-05T12:05:41.466Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是梦奇？&quot;&gt;&lt;a href=&quot;#什么是梦奇？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="JAVA多线程" scheme="https://cxc66.github.io/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java线程池</title>
+    <link href="https://cxc66.github.io/2022/01/21/java04/"/>
+    <id>https://cxc66.github.io/2022/01/21/java04/</id>
+    <published>2022-01-21T15:25:45.000Z</published>
+    <updated>2022-04-05T11:41:27.786Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是线程池？&quot;&gt;&lt;a href=&quot;#什么是线程池？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="JAVA多线程" scheme="https://cxc66.github.io/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java多线程</title>
+    <link href="https://cxc66.github.io/2022/01/02/java03/"/>
+    <id>https://cxc66.github.io/2022/01/02/java03/</id>
+    <published>2022-01-02T13:05:05.000Z</published>
+    <updated>2022-04-05T12:48:48.811Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是多线程&quot;&gt;&lt;a href=&quot;#什么是多线程&quot; class=&quot;headerlink&quot; title=&quot;什么是多线程&quot;&gt;&lt;/a&gt;什么是多线程&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;多线程:&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="JAVA多线程" scheme="https://cxc66.github.io/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>== 和 equals 的区别是什么</title>
     <link href="https://cxc66.github.io/2021/12/21/java02/"/>
     <id>https://cxc66.github.io/2021/12/21/java02/</id>
     <published>2021-12-21T01:25:05.000Z</published>
-    <updated>2022-04-05T10:54:02.289Z</updated>
+    <updated>2022-04-05T11:20:56.970Z</updated>
     
     
       
@@ -37,9 +118,9 @@
     <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
     
     
-    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <category term="JAVA基础" scheme="https://cxc66.github.io/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
     
-    <category term="JAVA集合框架" scheme="https://cxc66.github.io/tags/JAVA%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
@@ -48,14 +129,14 @@
     <link href="https://cxc66.github.io/2021/11/01/java00/"/>
     <id>https://cxc66.github.io/2021/11/01/java00/</id>
     <published>2021-11-01T05:25:08.000Z</published>
-    <updated>2022-04-05T10:45:47.336Z</updated>
+    <updated>2022-04-05T11:09:42.746Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Java的三大特性&quot;&gt;&lt;a href=&quot;#Java的三大特性&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;Java的三大特性&quot;&gt;&lt;a href=&quot;#Java的三大特性&quot; class=&quot;headerlink&quot; title=&quot;Java的三大特性&quot;&gt;&lt;/a&gt;Java的三大特性&lt;/h1&gt;&lt;h2 id=&quot;Java的三大特性-1&quot;&gt;&lt;a href=&quot;#Java的三大特性-1&quot;</summary>
         
       
     
@@ -67,33 +148,6 @@
     <category term="JAVA基础" scheme="https://cxc66.github.io/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
     
     <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库事务与脏读幻读</title>
-    <link href="https://cxc66.github.io/2021/10/08/mysql01-fu-ben/"/>
-    <id>https://cxc66.github.io/2021/10/08/mysql01-fu-ben/</id>
-    <published>2021-10-08T11:35:15.000Z</published>
-    <updated>2022-04-05T10:34:19.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;什么是数据库事务？&quot;&gt;&lt;a href=&quot;#什么是数据库事务？&quot; class=&quot;headerlink&quot; title=&quot;什么是数据库事务？&quot;&gt;&lt;/a&gt;什么是数据库事务？&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;说一下什么是数据库事务&lt;/strong&gt;&lt;br&gt;  </summary>
-        
-      
-    
-    
-    
-    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
-    
-    
-    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    <category term="mysql数据库" scheme="https://cxc66.github.io/tags/mysql%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
@@ -129,7 +183,7 @@
     <link href="https://cxc66.github.io/2021/10/07/java01/"/>
     <id>https://cxc66.github.io/2021/10/07/java01/</id>
     <published>2021-10-07T01:25:05.000Z</published>
-    <updated>2022-04-05T09:16:29.348Z</updated>
+    <updated>2022-04-05T10:59:23.242Z</updated>
     
     
       
@@ -164,27 +218,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;This is my first time to</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://cxc66.github.io/2019/09/05/hello-world/"/>
-    <id>https://cxc66.github.io/2019/09/05/hello-world/</id>
-    <published>2019-09-05T11:45:05.000Z</published>
-    <updated>2022-04-05T10:18:19.576Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
         
       
     
