@@ -436,388 +436,6 @@ public class XMLUtil {
       </tags>
   </entry>
   <entry>
-    <title>原型模式之克隆一个图形对象（圆形和矩形）</title>
-    <url>/2020/11/19/design-pattern04/</url>
-    <content><![CDATA[<h1 id="原型模式之克隆一个图形对象（圆形和矩形）"><a href="#原型模式之克隆一个图形对象（圆形和矩形）" class="headerlink" title="原型模式之克隆一个图形对象（圆形和矩形）"></a>原型模式之克隆一个图形对象（圆形和矩形）</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>原型模式（Prototype Pattern）是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<br>这种模式是实现了一个原型接口，该接口用于创建当前对象的克隆。当直接创建对象的代价比较大时，则采用这种模式。例如，一个对象需要在一个高代价的数据库操作之后被创建。我们可以缓存该对象，在下一个请求时返回它的克隆，在需要的时候更新数据库，以此来减少数据库调用。</p>
-</blockquote>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
-<p><strong>意图：</strong> 用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。</p>
-</blockquote>
-<blockquote>
-<p><strong>主要解决：</strong> 在运行期建立和删除原型。</p>
-</blockquote>
-<blockquote>
-<p><strong>何时使用：</strong>  1、当一个系统应该独立于它的产品创建，构成和表示时。 2、当要实例化的类是在运行时刻指定时，例如，通过动态装载。 3、为了避免创建一个与产品类层次平行的工厂类层次时。 4、当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们可能比每次用合适的状态手工实例化该类更方便一些。</p>
-</blockquote>
-<blockquote>
-<p><strong>如何解决：</strong> 利用已有的一个原型对象，快速地生成和原型对象一样的实例。</p>
-</blockquote>
-<blockquote>
-<p><strong>关键代码：</strong>  1、实现克隆操作，在 JAVA 继承 Cloneable，重写 clone()，在 .NET 中可以使用 Object 类的 MemberwiseClone() 方法来实现对象的浅拷贝或通过序列化的方式来实现深拷贝。 2、原型模式同样用于隔离类对象的使用者和具体类型（易变类）之间的耦合关系，它同样要求这些”易变类”拥有稳定的接口。</p>
-</blockquote>
-<blockquote>
-<p><strong>应用实例：</strong> 1、细胞分裂。 2、JAVA 中的 Object clone() 方法。</p>
-</blockquote>
-<blockquote>
-<p>**优点： ** 1、性能提高。 2、逃避构造函数的约束。<br><strong>缺点：</strong>  1、配备克隆方法需要对类的功能进行通盘考虑，这对于全新的类不是很难，但对于已有的类不一定很容易，特别当一个类引用不支持串行化的间接对象，或者引用含有循环结构的时候。 2、必须实现 Cloneable 接口。</p>
-</blockquote>
-<blockquote>
-<p>**使用场景： ** 1、资源优化场景。 2、类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等。 3、性能和安全要求的场景。 4、通过 new 产生一个对象需要非常繁琐的数据准备或访问权限，则可以使用原型模式。 5、一个对象多个修改者的场景。 6、一个对象需要提供给其他对象访问，而且各个调用者可能都需要修改其值时，可以考虑使用原型模式拷贝多个对象供调用者使用。 7、在实际项目中，原型模式很少单独出现，一般是和工厂方法模式一起出现，通过 clone 的方法创建一个对象，然后由工厂方法提供给调用者。原型模式已经与 Java 融为浑然一体，大家可以随手拿来使用。</p>
-</blockquote>
-<blockquote>
-<p><strong>注意事项：</strong> 与通过对一个类进行实例化来构造新对象不同的是，原型模式是通过拷贝一个现有对象生成新对象的。浅拷贝实现 Cloneable，重写，深拷贝是通过实现 Serializable 读取二进制流。</p>
-</blockquote>
-<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
-<p>有一个画板,可以从中取得两种图形:圆形(circle)和矩形(rectangle),它们都属于原型(prototype),当客户需要画一个图形时便从画板中取一个图形,在这个问题中,原型模式的关键在于画板克隆一个图形对象,然后返回给客户。</p>
-</blockquote>
-<h2 id="实例类图"><a href="#实例类图" class="headerlink" title="实例类图"></a>实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117190857663.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-<h2 id="实例实现代码"><a href="#实例实现代码" class="headerlink" title="实例实现代码"></a>实例实现代码</h2><blockquote>
-<p>3.1抽象原型类ZC32Graph</p>
-</blockquote>
-<pre><code>    public interface ZC32Graph extends Cloneable{
-        public Object clone();
-        public String getName();
-        public  void  draw();
-    }
-</code></pre>
-<blockquote>
-<p>3.11具体原型类ZC32Rectangle</p>
-</blockquote>
-<pre><code>    public class ZC32Rectangle implements ZC32Graph{
-          public  Object clone(){
-               Object clone= null ;
-                try {
-                   clone= (Object)super.clone();
-               } catch (CloneNotSupportedException e){
-                  
-               }
-                return  clone;
-            }
-             public  String getName(){
-                return   "Rectangle" ;
-            }
-             public  void  draw(){
-               System.out.println( "Draw a rectangle" );
-             }
-        }
-</code></pre>
-<blockquote>
-<p>3.12具体原型类ZC32Circle</p>
-</blockquote>
-<pre><code>    public class ZC32Circle implements ZC32Graph{
-        public  Object clone(){
-               Object clone= null ;
-                try {
-                   clone= (Object)super.clone();
-               } catch (CloneNotSupportedException e){
-                  
-               }
-                return  clone;
-            }
-             public  String getName(){
-                return   "circle" ;
-            }
-             public  void  draw(){
-               System.out.println("Draw a circle");
-            }
-    }
-</code></pre>
-<blockquote>
-<p>3.2原型管理器类ZC32Manager</p>
-</blockquote>
-<pre><code>    package yuanxingmoshi;
-    import java.util.HashMap;
-    import java.util.Hashtable;
-     
-    public class ZC32Manager {
-          private  HashMap  ht =new  HashMap();
-             public  ZC32Manager(){
-                ht.put( "circle", new ZC32Circle());
-                ht.put( "rectangle", new ZC32Rectangle());      
-            }
-             public  Object getClone(String key){
-               Object obj =  ht.get(key);
-                if (obj!= null ) return  ((ZC32Graph)obj).clone();
-                return   null ;
-    }}
-</code></pre>
-<blockquote>
-<p>3.3客户端测试类ZC32Client</p>
-</blockquote>
-<pre><code>    public class ZC32Client {
-        public   static   void  main(String[] args){
-            ZC32Manager ma =  new  ZC32Manager();
-            
-            ZC32Graph obj1=(ZC32Graph)ma.getClone( "circle" );
-            obj1.draw();
-                
-                ZC32Graph obj2=(ZC32Graph)ma.getClone( "rectangle" );
-                obj2.draw();
-            }
-    }
-</code></pre>
-<h2 id="4、结果"><a href="#4、结果" class="headerlink" title="4、结果"></a>4、结果</h2><blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20201117192154589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>单例模式之网站计算器</title>
-    <url>/2020/11/20/design-pattern05/</url>
-    <content><![CDATA[<h1 id="单例模式之网站计算器"><a href="#单例模式之网站计算器" class="headerlink" title="单例模式之网站计算器"></a>单例模式之网站计算器</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>单例模式（Singleton Pattern）是 Java 中最简单的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。</p>
-</blockquote>
-<blockquote>
-<p>这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。<br>注意：</p>
-<p>1、单例类只能有一个实例。<br>2、单例类必须自己创建自己的唯一实例。<br>3、单例类必须给所有其他对象提供这一实例。</p>
-</blockquote>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
-<p><strong>意图：</strong> 保证一个类仅有一个实例，并提供一个访问它的全局访问点。</p>
-</blockquote>
-<blockquote>
-<p><strong>主要解决：</strong> 一个全局使用的类频繁地创建与销毁。</p>
-</blockquote>
-<blockquote>
-<p><strong>何时使用：</strong>  当您想控制实例数目，节省系统资源的时候。</p>
-</blockquote>
-<blockquote>
-<p><strong>如何解决：</strong> 判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</p>
-</blockquote>
-<blockquote>
-<p><strong>关键代码：</strong>  构造函数是私有的。</p>
-</blockquote>
-<blockquote>
-<p><strong>应用实例：</strong> 1、一个班级只有一个班主任。<br>          2、Windows 是多进程多线程的，在操作一个文件的时候，就不可避免地出现多个进程或线程同时操作一个文件的现象，所以所有文件的处理必须通过唯一的实例来进行。<br>        3、一些设备管理器常常设计为单例模式，比如一个电脑有两台打印机，在输出的时候就要处理不能两台打印机打印同一个文件。</p>
-</blockquote>
-<blockquote>
-<p><strong>优点：</strong> 1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。<br>          2、避免对资源的多重占用（比如写文件操作）。<br><strong>缺点：</strong> 没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。</p>
-</blockquote>
-<blockquote>
-<p>**使用场景： ** 1、要求生产唯一序列号。<br>2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。<br>3、创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。<br><strong>注意事项：</strong> getInstance() 方法中需要使用同步锁 synchronized (Singleton.class) 防止多线程同时进入造成 instance 被多次实例化。</p>
-</blockquote>
-<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
-<p>网站计算器是web应用程序的一项基本功能,用于统计使用网站的人数,可反应出网站的受欢迎程序,请使用单例模式设计计数器</p>
-</blockquote>
-<h2 id="实例类图"><a href="#实例类图" class="headerlink" title="实例类图"></a>实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117192449717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-<h2 id="实例实现代码"><a href="#实例实现代码" class="headerlink" title="实例实现代码"></a>实例实现代码</h2><blockquote>
-<p>3.1单例类ZC32Singleton</p>
-</blockquote>
-<pre><code>public class ZC32Singleton {
-    private static ZC32Singleton instance=null;
-    private int count;
-    private ZC32Singleton(){
-        
-    }
-    public static ZC32Singleton getInstance(){
-        if(instance==null){
-            System.out.println("网站计算器已开启！！！");
-            instance=new ZC32Singleton();
-        }
-        return instance;
-    }
-    public int getCount(){
-        return count;
-    }
-    public void addOne(){
-        this.count++;
-        System.out.println("来访用户+1！目前访问次数为："+count);
-    }
-}
-</code></pre>
-<blockquote>
-<p>3.2客户端测试类ZC32Client</p>
-</blockquote>
-<pre><code>public class ZC32Client {
-    public static void main(String a[]) {
-        ZC32Singleton zc1,zc2,zc3,zc4;
-            zc1=ZC32Singleton.getInstance();
-            zc1.addOne();
-            zc2=ZC32Singleton.getInstance();
-            zc2.addOne();
-            zc3=ZC32Singleton.getInstance();
-            zc3.addOne();
-            zc4=ZC32Singleton.getInstance();
-            zc4.addOne();
-    }
-}
- 
-</code></pre>
-<h2 id="4、结果"><a href="#4、结果" class="headerlink" title="4、结果"></a>4、结果</h2><blockquote>
-<p><img src="https://img-blog.csdnimg.cn/2020111719290169.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>桥接模式之消息发送</title>
-    <url>/2020/11/21/design-pattern06/</url>
-    <content><![CDATA[<h1 id="桥接模式之消息发送"><a href="#桥接模式之消息发送" class="headerlink" title="桥接模式之消息发送"></a>桥接模式之消息发送</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>桥接（Bridge）是用于把抽象化与实现化解耦，使得二者可以独立变化。这种类型的设计模式属于结构型模式，它通过提供抽象化和实现化之间的桥接结构，来实现二者的解耦。</p>
-</blockquote>
-<blockquote>
-<p>这种模式涉及到一个作为桥接的接口，使得实体类的功能独立于接口实现类。这两种类型的类可被结构化改变而互不影响。</p>
-</blockquote>
-<blockquote>
-<p>我们通过下面的实例来演示桥接模式（Bridge Pattern）的用法。其中，可以使用相同的抽象类方法但是不同的桥接实现类，来画出不同颜色的圆。</p>
-</blockquote>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
-<p><strong>意图：</strong> 将抽象部分与实现部分分离，使它们都可以独立的变化。</p>
-</blockquote>
-<blockquote>
-<p><strong>主要解决：</strong> 在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。</p>
-</blockquote>
-<blockquote>
-<p><strong>何时使用：</strong>  实现系统可能有多个角度分类，每一种角度都可能变化。</p>
-</blockquote>
-<blockquote>
-<p><strong>如何解决：</strong> 把这种多角度分类分离出来，让它们独立变化，减少它们之间耦合。</p>
-</blockquote>
-<blockquote>
-<p><strong>关键代码：</strong>  抽象类依赖实现类。</p>
-</blockquote>
-<blockquote>
-<p><strong>应用实例：</strong> 1、猪八戒从天蓬元帅转世投胎到猪，转世投胎的机制将尘世划分为两个等级，即：灵魂和肉体，前者相当于抽象化，后者相当于实现化。生灵通过功能的委派，调用肉体对象的功能，使得生灵可以动态地选择。 2、墙上的开关，可以看到的开关是抽象的，不用管里面具体怎么实现的。</p>
-</blockquote>
-<blockquote>
-<p><strong>优点：</strong>  1、抽象和实现的分离。 2、优秀的扩展能力。 3、实现细节对客户透明。</p>
-</blockquote>
-<blockquote>
-<p><strong>缺点：</strong> 桥接模式的引入会增加系统的理解与设计难度，由于聚合关联关系建立在抽象层，要求开发者针对抽象进行设计与编程。</p>
-</blockquote>
-<blockquote>
-<p>**使用场景： ** 1、如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式可以使它们在抽象层建立一个关联关系。 2、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。 3、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。<br><strong>注意事项：</strong>对于两个独立变化的维度，使用桥接模式再适合不过了。</p>
-</blockquote>
-<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
-<p>电子商务网站常有这样的功能：发送消息通知，比如订货发货通知等，从业务上看，消息分为普通消息、加急消息和特急消息多种不同的消息类型，其业务处理是不一样的，比如加急消息是在消息上添加加急标记，而特急消息是添加了加急标记外，还会做一条催促的记录，多久不完成会继续催促。从发送消息的手段上看，又有系统内消息、手机短信消息、邮件等。请使用合适的设计模式进行设计，绘制所选择模式的结构图，并绘制该案例的类图，并编写代码实现并进行演示。</p>
-</blockquote>
-<h2 id="2、所用模式结构视图"><a href="#2、所用模式结构视图" class="headerlink" title="2、所用模式结构视图"></a>2、所用模式结构视图</h2><p><img src="https://img-blog.csdnimg.cn/20201117193217233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-<h2 id="3、实例类图"><a href="#3、实例类图" class="headerlink" title="3、实例类图"></a>3、实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117193315206.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-<h2 id="4、实例实现代码"><a href="#4、实例实现代码" class="headerlink" title="4、实例实现代码"></a>4、实例实现代码</h2><blockquote>
-<p>4.1实现类接口ZC32Type(消息类型类)</p>
-</blockquote>
-<pre><code>public interface ZC32Type {
-    
-    void besend(String MeansType,String counts);
-}
-</code></pre>
-<blockquote>
-<p>4.11具体实现类ZC32CommonNews(普通消息类)</p>
-</blockquote>
-<pre><code>public class ZC32CommonNews implements ZC32Type{
-    public void besend(String MeansType,String counts) {
-        System.out.println( MeansType+"普通消息"+counts+".");
-    }
-}
-</code></pre>
-<blockquote>
-<p>4.12具体实现类ZC32UNews(加急消息类)</p>
-</blockquote>
-<pre><code>    public class ZC32UNews implements ZC32Type{
-        public void besend(String MeansType,String counts) {
-            System.out.println( MeansType+"加急消息"+counts+".");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>4.13具体实现类ZC32EuNews(特急消息类)</p>
-</blockquote>
-<pre><code>    public class ZC32EuNews implements ZC32Type{
-        public void besend(String MeansType,String counts) {
-            System.out.println( MeansType+"特急消息"+counts+".");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>4.2抽象类ZC32Means(发送消息手段类)</p>
-</blockquote>
-<pre><code>    public abstract class ZC32Means {
-        protected ZC32Type type;
-        public void setType(ZC32Type type) {
-            this.type=type;
-        }
-        public abstract void send(String counts);
-    }
-</code></pre>
-<blockquote>
-<p>4.21扩充抽象类ZC32SystemNews(系统内消息类)</p>
-</blockquote>
-<pre><code>    public class ZC32SystemNews extends ZC32Means{
-        public void send(String counts)
-        {
-            String MeansType="系统内消息";
-            this.type.besend(MeansType, counts);
-        }
-    }
-</code></pre>
-<blockquote>
-<p>4.22扩充抽象类ZC32PhoneNews(手机短信消息类)</p>
-</blockquote>
-<pre><code>    public class ZC32PhoneNews extends ZC32Means{
-        public void send(String counts)
-        {
-            String MeansType="手机短信消息";
-            this.type.besend(MeansType, counts);
-        }
-    }
-</code></pre>
-<blockquote>
-<p>4.23扩充抽象类ZC32MailNews(邮件消息类)</p>
-</blockquote>
-<pre><code>    public class ZC32MailNews extends ZC32Means{
-        public void send(String counts)
-        {
-            String MeansType="邮件消息";
-            this.type.besend(MeansType, counts);
-        }
-     
-    }
-</code></pre>
-<blockquote>
-<p>4.3客户端测试类ZC32Client</p>
-</blockquote>
-<pre><code>    public class ZC32Client {
-        public static void main(String args[]) {
-            ZC32Type type1 =new ZC32EuNews();
-            ZC32Means means1=new ZC32MailNews();
-            means1.setType(type1);
-            means1.send("一条");
-        
-            ZC32Type type2 =new ZC32UNews();
-            ZC32Means means2=new ZC32PhoneNews();
-            means2.setType(type2);
-            means2.send("五条");
-        
-            ZC32Type type3 =new ZC32CommonNews();
-            ZC32Means means3=new ZC32SystemNews();
-            means3.setType(type3);
-            means3.send("八条");    
-        }
-    }
-</code></pre>
-<h2 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h2><blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20201117194048475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>抽象工厂模式之手机主题</title>
     <url>/2020/11/18/design-pattern03/</url>
     <content><![CDATA[<h1 id="抽象工厂模式之手机主题"><a href="#抽象工厂模式之手机主题" class="headerlink" title="抽象工厂模式之手机主题"></a>抽象工厂模式之手机主题</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
@@ -1120,6 +738,163 @@ public void changeWallpaper() {
       </tags>
   </entry>
   <entry>
+    <title>桥接模式之消息发送</title>
+    <url>/2020/11/21/design-pattern06/</url>
+    <content><![CDATA[<h1 id="桥接模式之消息发送"><a href="#桥接模式之消息发送" class="headerlink" title="桥接模式之消息发送"></a>桥接模式之消息发送</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>桥接（Bridge）是用于把抽象化与实现化解耦，使得二者可以独立变化。这种类型的设计模式属于结构型模式，它通过提供抽象化和实现化之间的桥接结构，来实现二者的解耦。</p>
+</blockquote>
+<blockquote>
+<p>这种模式涉及到一个作为桥接的接口，使得实体类的功能独立于接口实现类。这两种类型的类可被结构化改变而互不影响。</p>
+</blockquote>
+<blockquote>
+<p>我们通过下面的实例来演示桥接模式（Bridge Pattern）的用法。其中，可以使用相同的抽象类方法但是不同的桥接实现类，来画出不同颜色的圆。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
+<p><strong>意图：</strong> 将抽象部分与实现部分分离，使它们都可以独立的变化。</p>
+</blockquote>
+<blockquote>
+<p><strong>主要解决：</strong> 在有多种可能会变化的情况下，用继承会造成类爆炸问题，扩展起来不灵活。</p>
+</blockquote>
+<blockquote>
+<p><strong>何时使用：</strong>  实现系统可能有多个角度分类，每一种角度都可能变化。</p>
+</blockquote>
+<blockquote>
+<p><strong>如何解决：</strong> 把这种多角度分类分离出来，让它们独立变化，减少它们之间耦合。</p>
+</blockquote>
+<blockquote>
+<p><strong>关键代码：</strong>  抽象类依赖实现类。</p>
+</blockquote>
+<blockquote>
+<p><strong>应用实例：</strong> 1、猪八戒从天蓬元帅转世投胎到猪，转世投胎的机制将尘世划分为两个等级，即：灵魂和肉体，前者相当于抽象化，后者相当于实现化。生灵通过功能的委派，调用肉体对象的功能，使得生灵可以动态地选择。 2、墙上的开关，可以看到的开关是抽象的，不用管里面具体怎么实现的。</p>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong>  1、抽象和实现的分离。 2、优秀的扩展能力。 3、实现细节对客户透明。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong> 桥接模式的引入会增加系统的理解与设计难度，由于聚合关联关系建立在抽象层，要求开发者针对抽象进行设计与编程。</p>
+</blockquote>
+<blockquote>
+<p>**使用场景： ** 1、如果一个系统需要在构件的抽象化角色和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的继承联系，通过桥接模式可以使它们在抽象层建立一个关联关系。 2、对于那些不希望使用继承或因为多层次继承导致系统类的个数急剧增加的系统，桥接模式尤为适用。 3、一个类存在两个独立变化的维度，且这两个维度都需要进行扩展。<br><strong>注意事项：</strong>对于两个独立变化的维度，使用桥接模式再适合不过了。</p>
+</blockquote>
+<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
+<p>电子商务网站常有这样的功能：发送消息通知，比如订货发货通知等，从业务上看，消息分为普通消息、加急消息和特急消息多种不同的消息类型，其业务处理是不一样的，比如加急消息是在消息上添加加急标记，而特急消息是添加了加急标记外，还会做一条催促的记录，多久不完成会继续催促。从发送消息的手段上看，又有系统内消息、手机短信消息、邮件等。请使用合适的设计模式进行设计，绘制所选择模式的结构图，并绘制该案例的类图，并编写代码实现并进行演示。</p>
+</blockquote>
+<h2 id="2、所用模式结构视图"><a href="#2、所用模式结构视图" class="headerlink" title="2、所用模式结构视图"></a>2、所用模式结构视图</h2><p><img src="https://img-blog.csdnimg.cn/20201117193217233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="3、实例类图"><a href="#3、实例类图" class="headerlink" title="3、实例类图"></a>3、实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117193315206.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="4、实例实现代码"><a href="#4、实例实现代码" class="headerlink" title="4、实例实现代码"></a>4、实例实现代码</h2><blockquote>
+<p>4.1实现类接口ZC32Type(消息类型类)</p>
+</blockquote>
+<pre><code>public interface ZC32Type {
+    
+    void besend(String MeansType,String counts);
+}
+</code></pre>
+<blockquote>
+<p>4.11具体实现类ZC32CommonNews(普通消息类)</p>
+</blockquote>
+<pre><code>public class ZC32CommonNews implements ZC32Type{
+    public void besend(String MeansType,String counts) {
+        System.out.println( MeansType+"普通消息"+counts+".");
+    }
+}
+</code></pre>
+<blockquote>
+<p>4.12具体实现类ZC32UNews(加急消息类)</p>
+</blockquote>
+<pre><code>    public class ZC32UNews implements ZC32Type{
+        public void besend(String MeansType,String counts) {
+            System.out.println( MeansType+"加急消息"+counts+".");
+        }
+    }
+</code></pre>
+<blockquote>
+<p>4.13具体实现类ZC32EuNews(特急消息类)</p>
+</blockquote>
+<pre><code>    public class ZC32EuNews implements ZC32Type{
+        public void besend(String MeansType,String counts) {
+            System.out.println( MeansType+"特急消息"+counts+".");
+        }
+    }
+</code></pre>
+<blockquote>
+<p>4.2抽象类ZC32Means(发送消息手段类)</p>
+</blockquote>
+<pre><code>    public abstract class ZC32Means {
+        protected ZC32Type type;
+        public void setType(ZC32Type type) {
+            this.type=type;
+        }
+        public abstract void send(String counts);
+    }
+</code></pre>
+<blockquote>
+<p>4.21扩充抽象类ZC32SystemNews(系统内消息类)</p>
+</blockquote>
+<pre><code>    public class ZC32SystemNews extends ZC32Means{
+        public void send(String counts)
+        {
+            String MeansType="系统内消息";
+            this.type.besend(MeansType, counts);
+        }
+    }
+</code></pre>
+<blockquote>
+<p>4.22扩充抽象类ZC32PhoneNews(手机短信消息类)</p>
+</blockquote>
+<pre><code>    public class ZC32PhoneNews extends ZC32Means{
+        public void send(String counts)
+        {
+            String MeansType="手机短信消息";
+            this.type.besend(MeansType, counts);
+        }
+    }
+</code></pre>
+<blockquote>
+<p>4.23扩充抽象类ZC32MailNews(邮件消息类)</p>
+</blockquote>
+<pre><code>    public class ZC32MailNews extends ZC32Means{
+        public void send(String counts)
+        {
+            String MeansType="邮件消息";
+            this.type.besend(MeansType, counts);
+        }
+     
+    }
+</code></pre>
+<blockquote>
+<p>4.3客户端测试类ZC32Client</p>
+</blockquote>
+<pre><code>    public class ZC32Client {
+        public static void main(String args[]) {
+            ZC32Type type1 =new ZC32EuNews();
+            ZC32Means means1=new ZC32MailNews();
+            means1.setType(type1);
+            means1.send("一条");
+        
+            ZC32Type type2 =new ZC32UNews();
+            ZC32Means means2=new ZC32PhoneNews();
+            means2.setType(type2);
+            means2.send("五条");
+        
+            ZC32Type type3 =new ZC32CommonNews();
+            ZC32Means means3=new ZC32SystemNews();
+            means3.setType(type3);
+            means3.send("八条");    
+        }
+    }
+</code></pre>
+<h2 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h2><blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20201117194048475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>适配器模式之购物车商品推荐</title>
     <url>/2020/11/22/design-pattern07/</url>
     <content><![CDATA[<h1 id="适配器模式之购物车商品推荐"><a href="#适配器模式之购物车商品推荐" class="headerlink" title="适配器模式之购物车商品推荐"></a>适配器模式之购物车商品推荐</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
@@ -1225,138 +1000,129 @@ public void changeWallpaper() {
       </tags>
   </entry>
   <entry>
-    <title>组合模式之对购物网站</title>
-    <url>/2020/11/23/design-pattern09/</url>
-    <content><![CDATA[<h1 id="组合模式之对购物网站"><a href="#组合模式之对购物网站" class="headerlink" title="组合模式之对购物网站"></a>组合模式之对购物网站</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>组合模式（Composite Pattern），又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。</p>
-</blockquote>
-<blockquote>
-<p>这种模式创建了一个包含自己对象组的类。该类提供了修改相同对象组的方式。</p>
+    <title>原型模式之克隆一个图形对象（圆形和矩形）</title>
+    <url>/2020/11/19/design-pattern04/</url>
+    <content><![CDATA[<h1 id="原型模式之克隆一个图形对象（圆形和矩形）"><a href="#原型模式之克隆一个图形对象（圆形和矩形）" class="headerlink" title="原型模式之克隆一个图形对象（圆形和矩形）"></a>原型模式之克隆一个图形对象（圆形和矩形）</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>原型模式（Prototype Pattern）是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<br>这种模式是实现了一个原型接口，该接口用于创建当前对象的克隆。当直接创建对象的代价比较大时，则采用这种模式。例如，一个对象需要在一个高代价的数据库操作之后被创建。我们可以缓存该对象，在下一个请求时返回它的克隆，在需要的时候更新数据库，以此来减少数据库调用。</p>
 </blockquote>
 <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
-<p><strong>意图：</strong> 将对象组合成树形结构以表示”部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
+<p><strong>意图：</strong> 用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。</p>
 </blockquote>
 <blockquote>
-<p><strong>主要解决：</strong> 它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以像处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。</p>
+<p><strong>主要解决：</strong> 在运行期建立和删除原型。</p>
 </blockquote>
 <blockquote>
-<p><strong>何时使用：</strong>  1、您想表示对象的部分-整体层次结构（树形结构）。 2、您希望用户忽略组合对象与单个对象的不同，用户将统一地使用组合结构中的所有对象。</p>
+<p><strong>何时使用：</strong>  1、当一个系统应该独立于它的产品创建，构成和表示时。 2、当要实例化的类是在运行时刻指定时，例如，通过动态装载。 3、为了避免创建一个与产品类层次平行的工厂类层次时。 4、当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们可能比每次用合适的状态手工实例化该类更方便一些。</p>
 </blockquote>
 <blockquote>
-<p><strong>如何解决：</strong> 树枝和叶子实现统一接口，树枝内部组合该接口。</p>
+<p><strong>如何解决：</strong> 利用已有的一个原型对象，快速地生成和原型对象一样的实例。</p>
 </blockquote>
 <blockquote>
-<p><strong>关键代码：</strong>  树枝内部组合该接口，并且含有内部属性 List，里面放 Component。</p>
+<p><strong>关键代码：</strong>  1、实现克隆操作，在 JAVA 继承 Cloneable，重写 clone()，在 .NET 中可以使用 Object 类的 MemberwiseClone() 方法来实现对象的浅拷贝或通过序列化的方式来实现深拷贝。 2、原型模式同样用于隔离类对象的使用者和具体类型（易变类）之间的耦合关系，它同样要求这些”易变类”拥有稳定的接口。</p>
 </blockquote>
 <blockquote>
-<p><strong>应用实例：</strong> 1、算术表达式包括操作数、操作符和另一个操作数，其中，另一个操作数也可以是操作数、操作符和另一个操作数。 2、在 JAVA AWT 和 SWING 中，对于 Button 和 Checkbox 是树叶，Container 是树枝。</p>
+<p><strong>应用实例：</strong> 1、细胞分裂。 2、JAVA 中的 Object clone() 方法。</p>
 </blockquote>
 <blockquote>
-<p><strong>优点：</strong>  1、高层模块调用简单。 2、节点自由增加。<br><strong>缺点：</strong> 在使用组合模式时，其叶子和树枝的声明都是实现类，而不是接口，违反了依赖倒置原则。</p>
+<p>**优点： ** 1、性能提高。 2、逃避构造函数的约束。<br><strong>缺点：</strong>  1、配备克隆方法需要对类的功能进行通盘考虑，这对于全新的类不是很难，但对于已有的类不一定很容易，特别当一个类引用不支持串行化的间接对象，或者引用含有循环结构的时候。 2、必须实现 Cloneable 接口。</p>
 </blockquote>
 <blockquote>
-<p>**使用场景： ** 部分、整体场景，如树形菜单，文件、文件夹的管理。<br><strong>注意事项：</strong> 定义时为具体类。</p>
+<p>**使用场景： ** 1、资源优化场景。 2、类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等。 3、性能和安全要求的场景。 4、通过 new 产生一个对象需要非常繁琐的数据准备或访问权限，则可以使用原型模式。 5、一个对象多个修改者的场景。 6、一个对象需要提供给其他对象访问，而且各个调用者可能都需要修改其值时，可以考虑使用原型模式拷贝多个对象供调用者使用。 7、在实际项目中，原型模式很少单独出现，一般是和工厂方法模式一起出现，通过 clone 的方法创建一个对象，然后由工厂方法提供给调用者。原型模式已经与 Java 融为浑然一体，大家可以随手拿来使用。</p>
+</blockquote>
+<blockquote>
+<p><strong>注意事项：</strong> 与通过对一个类进行实例化来构造新对象不同的是，原型模式是通过拷贝一个现有对象生成新对象的。浅拷贝实现 Cloneable，重写，深拷贝是通过实现 Serializable 读取二进制流。</p>
 </blockquote>
 <h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
-<p>用组合模式对购物网站的商品进管理，绘制选择模式的结构图，并绘制该案例的类图，并编写代码演示结果，运行结果样例显示如右图所示。<br><img src="https://img-blog.csdnimg.cn/20201117200403842.png"></p>
+<p>有一个画板,可以从中取得两种图形:圆形(circle)和矩形(rectangle),它们都属于原型(prototype),当客户需要画一个图形时便从画板中取一个图形,在这个问题中,原型模式的关键在于画板克隆一个图形对象,然后返回给客户。</p>
 </blockquote>
-<h2 id="2、所用模式结构视图"><a href="#2、所用模式结构视图" class="headerlink" title="2、所用模式结构视图"></a>2、所用模式结构视图</h2><p><img src="https://img-blog.csdnimg.cn/2020111720052754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-<h2 id="3、实例类图"><a href="#3、实例类图" class="headerlink" title="3、实例类图"></a>3、实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117200613180.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-<h2 id="4、实例实现代码"><a href="#4、实例实现代码" class="headerlink" title="4、实例实现代码"></a>4、实例实现代码</h2><blockquote>
-<p>4.1抽象构件类ZC32Clothing</p>
+<h2 id="实例类图"><a href="#实例类图" class="headerlink" title="实例类图"></a>实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117190857663.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="实例实现代码"><a href="#实例实现代码" class="headerlink" title="实例实现代码"></a>实例实现代码</h2><blockquote>
+<p>3.1抽象原型类ZC32Graph</p>
 </blockquote>
-<pre><code>    public abstract class ZC32Clothing {
-        protected String name;
-        public ZC32Clothing(String name) {
-            this.name=name;
-        }
-        public abstract void add(ZC32Clothing c);
-        public abstract void remove(ZC32Clothing c);
-        public abstract void display(int depth);    
+<pre><code>    public interface ZC32Graph extends Cloneable{
+        public Object clone();
+        public String getName();
+        public  void  draw();
     }
 </code></pre>
 <blockquote>
-<p>4.2容器构建类ZC32SexClothing（男女服装类）</p>
+<p>3.11具体原型类ZC32Rectangle</p>
 </blockquote>
-<pre><code>    import java.util.ArrayList;
-    import java.util.List;
-     
-    public class ZC32SexCloting extends ZC32Clothing {
-        private List&lt;ZC32Clothing&gt; list=new ArrayList&lt;ZC32Clothing&gt;();
-        public ZC32SexCloting(String name) {
-            super(name);
-             
+<pre><code>    public class ZC32Rectangle implements ZC32Graph{
+          public  Object clone(){
+               Object clone= null ;
+                try {
+                   clone= (Object)super.clone();
+               } catch (CloneNotSupportedException e){
+                  
+               }
+                return  clone;
+            }
+             public  String getName(){
+                return   "Rectangle" ;
+            }
+             public  void  draw(){
+               System.out.println( "Draw a rectangle" );
+             }
         }
-     
-        public void add(ZC32Clothing c) {
-                list.add(c);
-        }
-        public void remove(ZC32Clothing c) {
-            list.remove(c);
-     
-        }
-        public void display(int depth) {
-            for(int i=1;i&lt;=depth;++i)System.out.print("-");
-            System.out.println(name);
-            for(ZC32Clothing c:list)c.display(depth+4);
-        }
+</code></pre>
+<blockquote>
+<p>3.12具体原型类ZC32Circle</p>
+</blockquote>
+<pre><code>    public class ZC32Circle implements ZC32Graph{
+        public  Object clone(){
+               Object clone= null ;
+                try {
+                   clone= (Object)super.clone();
+               } catch (CloneNotSupportedException e){
+                  
+               }
+                return  clone;
+            }
+             public  String getName(){
+                return   "circle" ;
+            }
+             public  void  draw(){
+               System.out.println("Draw a circle");
+            }
     }
 </code></pre>
 <blockquote>
-<p>4.3叶子构建类ZC32Type（具体服装类）</p>
+<p>3.2原型管理器类ZC32Manager</p>
 </blockquote>
-<pre><code>    public class ZC32Type extends ZC32Clothing{
-         
-            public ZC32Type(String name) {
-                super(name);
-         
+<pre><code>    package yuanxingmoshi;
+    import java.util.HashMap;
+    import java.util.Hashtable;
+     
+    public class ZC32Manager {
+          private  HashMap  ht =new  HashMap();
+             public  ZC32Manager(){
+                ht.put( "circle", new ZC32Circle());
+                ht.put( "rectangle", new ZC32Rectangle());      
             }
-            public void add(ZC32Clothing c) {
-                System.out.println("不能添加");
-                
-            }
-            public void remove(ZC32Clothing c) {
-                System.out.println("不能删除");
-                
-            }
-            public void display(int depth) {
-                for(int i=1;i&lt;=depth;++i)System.out.print("-");
-                System.out.println(name);
-            }
-        }
+             public  Object getClone(String key){
+               Object obj =  ht.get(key);
+                if (obj!= null ) return  ((ZC32Graph)obj).clone();
+                return   null ;
+    }}
 </code></pre>
 <blockquote>
-<p>4.4客户端测试类ZC32Client</p>
+<p>3.3客户端测试类ZC32Client</p>
 </blockquote>
 <pre><code>    public class ZC32Client {
-        public static void main(String[] args) {
-            ZC32Clothing c=new ZC32SexCloting("服装");
+        public   static   void  main(String[] args){
+            ZC32Manager ma =  new  ZC32Manager();
             
-            ZC32Clothing man=new ZC32SexCloting("男装");
-            ZC32Clothing woman=new ZC32SexCloting("女装");
-            
-            ZC32Clothing man1=new ZC32Type("衬衣");
-            ZC32Clothing man2=new ZC32Type("夹克");
-            ZC32Clothing woman1=new ZC32Type("裙子");
-            ZC32Clothing woman2=new ZC32Type("套装");
-                    
-            c.add(man);
-            c.add(woman);
-            
-            man.add(man1);
-            man.add(man2);
-            
-            woman.add(woman1);
-            woman.add(woman2);
-            
-            c.display(1);
-     
-        }
-     
+            ZC32Graph obj1=(ZC32Graph)ma.getClone( "circle" );
+            obj1.draw();
+                
+                ZC32Graph obj2=(ZC32Graph)ma.getClone( "rectangle" );
+                obj2.draw();
+            }
     }
 </code></pre>
-<h2 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h2><blockquote>
-<p><img src="https://img-blog.csdnimg.cn/20201117200941451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="4、结果"><a href="#4、结果" class="headerlink" title="4、结果"></a>4、结果</h2><blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20201117192154589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1520,6 +1286,98 @@ public void changeWallpaper() {
       </tags>
   </entry>
   <entry>
+    <title>单例模式之网站计算器</title>
+    <url>/2020/11/20/design-pattern05/</url>
+    <content><![CDATA[<h1 id="单例模式之网站计算器"><a href="#单例模式之网站计算器" class="headerlink" title="单例模式之网站计算器"></a>单例模式之网站计算器</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>单例模式（Singleton Pattern）是 Java 中最简单的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。</p>
+</blockquote>
+<blockquote>
+<p>这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。<br>注意：</p>
+<p>1、单例类只能有一个实例。<br>2、单例类必须自己创建自己的唯一实例。<br>3、单例类必须给所有其他对象提供这一实例。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
+<p><strong>意图：</strong> 保证一个类仅有一个实例，并提供一个访问它的全局访问点。</p>
+</blockquote>
+<blockquote>
+<p><strong>主要解决：</strong> 一个全局使用的类频繁地创建与销毁。</p>
+</blockquote>
+<blockquote>
+<p><strong>何时使用：</strong>  当您想控制实例数目，节省系统资源的时候。</p>
+</blockquote>
+<blockquote>
+<p><strong>如何解决：</strong> 判断系统是否已经有这个单例，如果有则返回，如果没有则创建。</p>
+</blockquote>
+<blockquote>
+<p><strong>关键代码：</strong>  构造函数是私有的。</p>
+</blockquote>
+<blockquote>
+<p><strong>应用实例：</strong> 1、一个班级只有一个班主任。<br>          2、Windows 是多进程多线程的，在操作一个文件的时候，就不可避免地出现多个进程或线程同时操作一个文件的现象，所以所有文件的处理必须通过唯一的实例来进行。<br>        3、一些设备管理器常常设计为单例模式，比如一个电脑有两台打印机，在输出的时候就要处理不能两台打印机打印同一个文件。</p>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong> 1、在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例（比如管理学院首页页面缓存）。<br>          2、避免对资源的多重占用（比如写文件操作）。<br><strong>缺点：</strong> 没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化。</p>
+</blockquote>
+<blockquote>
+<p>**使用场景： ** 1、要求生产唯一序列号。<br>2、WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。<br>3、创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。<br><strong>注意事项：</strong> getInstance() 方法中需要使用同步锁 synchronized (Singleton.class) 防止多线程同时进入造成 instance 被多次实例化。</p>
+</blockquote>
+<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
+<p>网站计算器是web应用程序的一项基本功能,用于统计使用网站的人数,可反应出网站的受欢迎程序,请使用单例模式设计计数器</p>
+</blockquote>
+<h2 id="实例类图"><a href="#实例类图" class="headerlink" title="实例类图"></a>实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117192449717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="实例实现代码"><a href="#实例实现代码" class="headerlink" title="实例实现代码"></a>实例实现代码</h2><blockquote>
+<p>3.1单例类ZC32Singleton</p>
+</blockquote>
+<pre><code>public class ZC32Singleton {
+    private static ZC32Singleton instance=null;
+    private int count;
+    private ZC32Singleton(){
+        
+    }
+    public static ZC32Singleton getInstance(){
+        if(instance==null){
+            System.out.println("网站计算器已开启！！！");
+            instance=new ZC32Singleton();
+        }
+        return instance;
+    }
+    public int getCount(){
+        return count;
+    }
+    public void addOne(){
+        this.count++;
+        System.out.println("来访用户+1！目前访问次数为："+count);
+    }
+}
+</code></pre>
+<blockquote>
+<p>3.2客户端测试类ZC32Client</p>
+</blockquote>
+<pre><code>public class ZC32Client {
+    public static void main(String a[]) {
+        ZC32Singleton zc1,zc2,zc3,zc4;
+            zc1=ZC32Singleton.getInstance();
+            zc1.addOne();
+            zc2=ZC32Singleton.getInstance();
+            zc2.addOne();
+            zc3=ZC32Singleton.getInstance();
+            zc3.addOne();
+            zc4=ZC32Singleton.getInstance();
+            zc4.addOne();
+    }
+}
+ 
+</code></pre>
+<h2 id="4、结果"><a href="#4、结果" class="headerlink" title="4、结果"></a>4、结果</h2><blockquote>
+<p><img src="https://img-blog.csdnimg.cn/2020111719290169.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>享元模式之网店模板</title>
     <url>/2020/11/25/design-pattern10/</url>
     <content><![CDATA[<h1 id="享元模式之网店模板"><a href="#享元模式之网店模板" class="headerlink" title="享元模式之网店模板"></a>享元模式之网店模板</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
@@ -1650,33 +1508,6 @@ public void changeWallpaper() {
       </tags>
   </entry>
   <entry>
-    <title>第一次博客文章测试</title>
-    <url>/2019/09/07/first/</url>
-    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p><strong>This is my first time to use Markdown</strong><br><em>第一次用文本编辑器写Markdown文档</em><br><del>这只是万里长征第一步</del> </p>
-<p><del>这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</del><br>但是，万事开头难 有了第一步，坚持下去，定有收获！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>ArrayList 和 LinkedList 的区别是什么？</title>
-    <url>/2021/10/07/java01/</url>
-    <content><![CDATA[<h1 id="ArrayList-和-LinkedList-的区别是什么？"><a href="#ArrayList-和-LinkedList-的区别是什么？" class="headerlink" title="ArrayList 和 LinkedList 的区别是什么？"></a>ArrayList 和 LinkedList 的区别是什么？</h1><h2 id="说一下-ArrayList-的优缺点"><a href="#说一下-ArrayList-的优缺点" class="headerlink" title="说一下 ArrayList 的优缺点"></a>说一下 ArrayList 的优缺点</h2><p><strong>ArrayList的优点如下：</strong><br>   ArrayList 底层以数组实现，是一种随机访问模式。ArrayList 实现了RandomAccess 接口，因此查找的时候非常快。<br>   ArrayList 在顺序添加一个元素的时候非常方便。</p>
-<p><strong>ArrayList 的缺点如下：</strong><br>   删除元素的时候，需要做一次元素复制操作。如果要复制的元素很多，那么就会比较耗费性能。<br>   插入元素的时候，也需要做一次元素复制操作，缺点同上。<br>ArrayList 比较适合顺序添加、随机访问的场景。</p>
-<h2 id="ArrayList-和-LinkedList-的区别是什么？-1"><a href="#ArrayList-和-LinkedList-的区别是什么？-1" class="headerlink" title="ArrayList 和 LinkedList 的区别是什么？"></a>ArrayList 和 LinkedList 的区别是什么？</h2><p><strong>数据结构实现：</strong> ArrayList 是动态数组的数据结构实现，而LinkedList 是双向链表的数据结构实现。</p>
-<p><strong>随机访问效率：</strong> ArrayList 比 LinkedList 在随机访问的时候效率要高，因为 LinkedList 是线性的数据存储方式，所以需要移动指针从前往后依次查找。</p>
-<p><strong>增加和删除效率：</strong> 在非首尾的增加和删除操作，LinkedList 要比 ArrayList 效率要高，因为 ArrayList 增删操作要影响数组内的其他数据的下标。</p>
-<p><strong>内存空间占用：</strong> LinkedList 比 ArrayList 更占内存，因为 LinkedList 的节点除了存储数据，还存储了两个引用，一个指向前一个元素，一个指向后一个元素。</p>
-<p><strong>线程安全：</strong> ArrayList 和 LinkedList 都是不同步的，也就是不保证线程安全；<br>综合来说，在需要频繁读取集合中的元素时，更推荐使用 ArrayList，而在插入和删除操作较多时，更推荐使用 LinkedList。</p>
-<p>LinkedList 的双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA集合框架</tag>
-        <tag>JAVA面试题</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java的三大特性</title>
     <url>/2021/11/01/java00/</url>
     <content><![CDATA[<h1 id="Java的三大特性"><a href="#Java的三大特性" class="headerlink" title="Java的三大特性"></a>Java的三大特性</h1><h2 id="Java的三大特性-1"><a href="#Java的三大特性-1" class="headerlink" title="Java的三大特性"></a>Java的三大特性</h2><p><strong>封装:</strong> 隐藏内部功能的具体实现，只保留和外部交流数据的接口，将变化隔离，便于使用，提高复用性和安全性。例：汽车与发动机，不必知道发动机的实现原理，只需使用汽车给予的接口，插入钥匙。</p>
@@ -1699,8 +1530,177 @@ public void changeWallpaper() {
         <category>JAVA</category>
       </categories>
       <tags>
-        <tag>JAVA面试题</tag>
         <tag>JAVA基础</tag>
+        <tag>JAVA面试题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>组合模式之对购物网站</title>
+    <url>/2020/11/23/design-pattern09/</url>
+    <content><![CDATA[<h1 id="组合模式之对购物网站"><a href="#组合模式之对购物网站" class="headerlink" title="组合模式之对购物网站"></a>组合模式之对购物网站</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>组合模式（Composite Pattern），又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。</p>
+</blockquote>
+<blockquote>
+<p>这种模式创建了一个包含自己对象组的类。该类提供了修改相同对象组的方式。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
+<p><strong>意图：</strong> 将对象组合成树形结构以表示”部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
+</blockquote>
+<blockquote>
+<p><strong>主要解决：</strong> 它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以像处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。</p>
+</blockquote>
+<blockquote>
+<p><strong>何时使用：</strong>  1、您想表示对象的部分-整体层次结构（树形结构）。 2、您希望用户忽略组合对象与单个对象的不同，用户将统一地使用组合结构中的所有对象。</p>
+</blockquote>
+<blockquote>
+<p><strong>如何解决：</strong> 树枝和叶子实现统一接口，树枝内部组合该接口。</p>
+</blockquote>
+<blockquote>
+<p><strong>关键代码：</strong>  树枝内部组合该接口，并且含有内部属性 List，里面放 Component。</p>
+</blockquote>
+<blockquote>
+<p><strong>应用实例：</strong> 1、算术表达式包括操作数、操作符和另一个操作数，其中，另一个操作数也可以是操作数、操作符和另一个操作数。 2、在 JAVA AWT 和 SWING 中，对于 Button 和 Checkbox 是树叶，Container 是树枝。</p>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong>  1、高层模块调用简单。 2、节点自由增加。<br><strong>缺点：</strong> 在使用组合模式时，其叶子和树枝的声明都是实现类，而不是接口，违反了依赖倒置原则。</p>
+</blockquote>
+<blockquote>
+<p>**使用场景： ** 部分、整体场景，如树形菜单，文件、文件夹的管理。<br><strong>注意事项：</strong> 定义时为具体类。</p>
+</blockquote>
+<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
+<p>用组合模式对购物网站的商品进管理，绘制选择模式的结构图，并绘制该案例的类图，并编写代码演示结果，运行结果样例显示如右图所示。<br><img src="https://img-blog.csdnimg.cn/20201117200403842.png"></p>
+</blockquote>
+<h2 id="2、所用模式结构视图"><a href="#2、所用模式结构视图" class="headerlink" title="2、所用模式结构视图"></a>2、所用模式结构视图</h2><p><img src="https://img-blog.csdnimg.cn/2020111720052754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="3、实例类图"><a href="#3、实例类图" class="headerlink" title="3、实例类图"></a>3、实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117200613180.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="4、实例实现代码"><a href="#4、实例实现代码" class="headerlink" title="4、实例实现代码"></a>4、实例实现代码</h2><blockquote>
+<p>4.1抽象构件类ZC32Clothing</p>
+</blockquote>
+<pre><code>    public abstract class ZC32Clothing {
+        protected String name;
+        public ZC32Clothing(String name) {
+            this.name=name;
+        }
+        public abstract void add(ZC32Clothing c);
+        public abstract void remove(ZC32Clothing c);
+        public abstract void display(int depth);    
+    }
+</code></pre>
+<blockquote>
+<p>4.2容器构建类ZC32SexClothing（男女服装类）</p>
+</blockquote>
+<pre><code>    import java.util.ArrayList;
+    import java.util.List;
+     
+    public class ZC32SexCloting extends ZC32Clothing {
+        private List&lt;ZC32Clothing&gt; list=new ArrayList&lt;ZC32Clothing&gt;();
+        public ZC32SexCloting(String name) {
+            super(name);
+             
+        }
+     
+        public void add(ZC32Clothing c) {
+                list.add(c);
+        }
+        public void remove(ZC32Clothing c) {
+            list.remove(c);
+     
+        }
+        public void display(int depth) {
+            for(int i=1;i&lt;=depth;++i)System.out.print("-");
+            System.out.println(name);
+            for(ZC32Clothing c:list)c.display(depth+4);
+        }
+    }
+</code></pre>
+<blockquote>
+<p>4.3叶子构建类ZC32Type（具体服装类）</p>
+</blockquote>
+<pre><code>    public class ZC32Type extends ZC32Clothing{
+         
+            public ZC32Type(String name) {
+                super(name);
+         
+            }
+            public void add(ZC32Clothing c) {
+                System.out.println("不能添加");
+                
+            }
+            public void remove(ZC32Clothing c) {
+                System.out.println("不能删除");
+                
+            }
+            public void display(int depth) {
+                for(int i=1;i&lt;=depth;++i)System.out.print("-");
+                System.out.println(name);
+            }
+        }
+</code></pre>
+<blockquote>
+<p>4.4客户端测试类ZC32Client</p>
+</blockquote>
+<pre><code>    public class ZC32Client {
+        public static void main(String[] args) {
+            ZC32Clothing c=new ZC32SexCloting("服装");
+            
+            ZC32Clothing man=new ZC32SexCloting("男装");
+            ZC32Clothing woman=new ZC32SexCloting("女装");
+            
+            ZC32Clothing man1=new ZC32Type("衬衣");
+            ZC32Clothing man2=new ZC32Type("夹克");
+            ZC32Clothing woman1=new ZC32Type("裙子");
+            ZC32Clothing woman2=new ZC32Type("套装");
+                    
+            c.add(man);
+            c.add(woman);
+            
+            man.add(man1);
+            man.add(man2);
+            
+            woman.add(woman1);
+            woman.add(woman2);
+            
+            c.display(1);
+     
+        }
+     
+    }
+</code></pre>
+<h2 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h2><blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20201117200941451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一次博客文章测试</title>
+    <url>/2019/09/07/first/</url>
+    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p><strong>This is my first time to use Markdown</strong><br><em>第一次用文本编辑器写Markdown文档</em><br><del>这只是万里长征第一步</del> </p>
+<p><del>这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</del><br>但是，万事开头难 有了第一步，坚持下去，定有收获！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>ArrayList 和 LinkedList 的区别是什么？</title>
+    <url>/2021/10/07/java01/</url>
+    <content><![CDATA[<h1 id="ArrayList-和-LinkedList-的区别是什么？"><a href="#ArrayList-和-LinkedList-的区别是什么？" class="headerlink" title="ArrayList 和 LinkedList 的区别是什么？"></a>ArrayList 和 LinkedList 的区别是什么？</h1><h2 id="说一下-ArrayList-的优缺点"><a href="#说一下-ArrayList-的优缺点" class="headerlink" title="说一下 ArrayList 的优缺点"></a>说一下 ArrayList 的优缺点</h2><p><strong>ArrayList的优点如下：</strong><br>   ArrayList 底层以数组实现，是一种随机访问模式。ArrayList 实现了RandomAccess 接口，因此查找的时候非常快。<br>   ArrayList 在顺序添加一个元素的时候非常方便。</p>
+<p><strong>ArrayList 的缺点如下：</strong><br>   删除元素的时候，需要做一次元素复制操作。如果要复制的元素很多，那么就会比较耗费性能。<br>   插入元素的时候，也需要做一次元素复制操作，缺点同上。<br>ArrayList 比较适合顺序添加、随机访问的场景。</p>
+<h2 id="ArrayList-和-LinkedList-的区别是什么？-1"><a href="#ArrayList-和-LinkedList-的区别是什么？-1" class="headerlink" title="ArrayList 和 LinkedList 的区别是什么？"></a>ArrayList 和 LinkedList 的区别是什么？</h2><p><strong>数据结构实现：</strong> ArrayList 是动态数组的数据结构实现，而LinkedList 是双向链表的数据结构实现。</p>
+<p><strong>随机访问效率：</strong> ArrayList 比 LinkedList 在随机访问的时候效率要高，因为 LinkedList 是线性的数据存储方式，所以需要移动指针从前往后依次查找。</p>
+<p><strong>增加和删除效率：</strong> 在非首尾的增加和删除操作，LinkedList 要比 ArrayList 效率要高，因为 ArrayList 增删操作要影响数组内的其他数据的下标。</p>
+<p><strong>内存空间占用：</strong> LinkedList 比 ArrayList 更占内存，因为 LinkedList 的节点除了存储数据，还存储了两个引用，一个指向前一个元素，一个指向后一个元素。</p>
+<p><strong>线程安全：</strong> ArrayList 和 LinkedList 都是不同步的，也就是不保证线程安全；<br>综合来说，在需要频繁读取集合中的元素时，更推荐使用 ArrayList，而在插入和删除操作较多时，更推荐使用 LinkedList。</p>
+<p>LinkedList 的双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA面试题</tag>
+        <tag>JAVA集合框架</tag>
       </tags>
   </entry>
   <entry>
@@ -1740,8 +1740,8 @@ public void changeWallpaper() {
         <category>JAVA</category>
       </categories>
       <tags>
-        <tag>JAVA面试题</tag>
         <tag>JAVA基础</tag>
+        <tag>JAVA面试题</tag>
       </tags>
   </entry>
   <entry>
@@ -1860,18 +1860,6 @@ public void changeWallpaper() {
       </tags>
   </entry>
   <entry>
-    <title>李跳跳</title>
-    <url>/2022/04/03/ruan-jian-00/</url>
-    <content><![CDATA[<h1 id="什么是李跳跳？"><a href="#什么是李跳跳？" class="headerlink" title="什么是李跳跳？"></a>什么是李跳跳？</h1><p>李跳跳是安卓神器，一个能帮助你自动跳过手机软件启动页广告的APP.<br><a href="https://wwe.lanzouw.com/b01v0g3wj?w1" title="点这里下载APP吧，密码1233。">点这里下载APP吧，密码1233。</a></p>
-]]></content>
-      <categories>
-        <category>安卓APP</category>
-      </categories>
-      <tags>
-        <tag>安卓APP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>三次握手 四次挥手</title>
     <url>/2022/03/21/java04/</url>
     <content><![CDATA[<h1 id="什么是三次握手？"><a href="#什么是三次握手？" class="headerlink" title="什么是三次握手？"></a>什么是三次握手？</h1><pre><code>    1.进行三次握手，首先向服务器发送一个syn报文，其中syn=1，seq number=1022(随机)；
@@ -1909,6 +1897,18 @@ public void changeWallpaper() {
       <tags>
         <tag>JAVA面试题</tag>
         <tag>JAVA多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>李跳跳</title>
+    <url>/2022/04/03/ruan-jian-00/</url>
+    <content><![CDATA[<h1 id="什么是李跳跳？"><a href="#什么是李跳跳？" class="headerlink" title="什么是李跳跳？"></a>什么是李跳跳？</h1><p>李跳跳是安卓神器，一个能帮助你自动跳过手机软件启动页广告的APP.<br><a href="https://wwe.lanzouw.com/b01v0g3wj?w1" title="点这里下载APP吧，密码1233。">点这里下载APP吧，密码1233。</a></p>
+]]></content>
+      <categories>
+        <category>安卓APP</category>
+      </categories>
+      <tags>
+        <tag>安卓APP</tag>
       </tags>
   </entry>
 </search>
