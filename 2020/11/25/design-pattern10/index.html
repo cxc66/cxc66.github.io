@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="梦奇, chaos超">
-    <meta name="description" content="梦奇是一个人，一个女孩子">
+    <meta name="keywords" content="享元模式之网店模板, chaos超">
+    <meta name="description" content="享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了减少对象数量从而改善应用所需的对象结构的方式。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>梦奇 | chaos超</title>
+    <title>享元模式之网店模板 | chaos超</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">梦奇</h1>
+                    <h1 class="description center-align post-title">享元模式之网店模板</h1>
                 </div>
             </div>
         </div>
@@ -339,12 +339,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                <span class="chip bg-color">JAVA面试题</span>
-                            </a>
-                        
-                            <a href="/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                                <span class="chip bg-color">JAVA多线程</span>
+                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                                <span class="chip bg-color">设计模式</span>
                             </a>
                         
                     </div>
@@ -368,7 +364,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-02
+                    2020-11-25
                 </div>
                 
 
@@ -392,7 +388,125 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="什么是梦奇？"><a href="#什么是梦奇？" class="headerlink" title="什么是梦奇？"></a>什么是梦奇？</h1><p>梦奇是一个人，一个女孩子</p>
+                <h1 id="享元模式之网店模板"><a href="#享元模式之网店模板" class="headerlink" title="享元模式之网店模板"></a>享元模式之网店模板</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了减少对象数量从而改善应用所需的对象结构的方式。</p>
+</blockquote>
+<blockquote>
+<p>享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。我们将通过创建 5 个对象来画出 20 个分布于不同位置的圆来演示这种模式。由于只有 5 种可用的颜色，所以 color 属性被用来检查现有的 Circle 对象。</p>
+</blockquote>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
+<p><strong>意图：</strong> 运用共享技术有效地支持大量细粒度的对象。</p>
+</blockquote>
+<blockquote>
+<p><strong>主要解决：</strong> 在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。</p>
+</blockquote>
+<blockquote>
+<p><strong>何时使用：</strong>  1、系统中有大量对象。 2、这些对象消耗大量内存。 3、这些对象的状态大部分可以外部化。 4、这些对象可以按照内蕴状态分为很多组，当把外蕴对象从对象中剔除出来时，每一组对象都可以用一个对象来代替。 5、系统不依赖于这些对象身份，这些对象是不可分辨的。</p>
+</blockquote>
+<blockquote>
+<p><strong>如何解决：</strong> 用唯一标识码判断，如果在内存中有，则返回这个唯一标识码所标识的对象。</p>
+</blockquote>
+<blockquote>
+<p><strong>关键代码：</strong>  用 HashMap 存储这些对象。</p>
+</blockquote>
+<blockquote>
+<p><strong>应用实例：</strong> 用 HashMap 存储这些对象。</p>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong>  大大减少对象的创建，降低系统的内存，使效率提高。<br><strong>缺点：</strong> 提高了系统的复杂度，需要分离出外部状态和内部状态，而且外部状态具有固有化的性质，不应该随着内部状态的变化而变化，否则会造成系统的混乱。</p>
+</blockquote>
+<blockquote>
+<p>**使用场景： ** 1、系统有大量相似对象。 2、需要缓冲池的场景。<br><strong>注意事项：</strong> 1、注意划分外部状态和内部状态，否则可能会引起线程安全问题。 2、这些类必须有一个工厂对象加以控制。</p>
+</blockquote>
+<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
+<p>在天猫商城里存在着成天上万的网店，但是天猫所提供的网站模板是一样的，存在许多天猫网店使用同一个网店模板的情况，如果每一个网店都用一个网店对象来表示，因为网店数量巨大，我们需求很多的网店对象来表示，但是，采用同一套网店模板的网店除了里面所展示的内容不一样或者使用权限不同以外，网店的风格样式几乎一致，除了一些定制化的功能，比如logo等，请使用享元模式来模拟此问题。</p>
+</blockquote>
+<h2 id="2、所用模式结构视图"><a href="#2、所用模式结构视图" class="headerlink" title="2、所用模式结构视图"></a>2、所用模式结构视图</h2><p><img src="https://img-blog.csdnimg.cn/20201117201133101.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="3、实例类图"><a href="#3、实例类图" class="headerlink" title="3、实例类图"></a>3、实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117201210158.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
+<h2 id="4、实例实现代码"><a href="#4、实例实现代码" class="headerlink" title="4、实例实现代码"></a>4、实例实现代码</h2><blockquote>
+<p>4.1抽象享元类ZC32OnlineShop（网店类）</p>
+</blockquote>
+<pre><code>    public abstract class ZC32OnlineShop {
+        public abstract  void logo(ZC32Logo logo);
+    }
+</code></pre>
+<blockquote>
+<p>4.2具体享元类ZC32ZC32Style（风格样式类）</p>
+</blockquote>
+<pre><code>    public class ZC32Style extends ZC32OnlineShop {
+        private String style;
+        
+        public ZC32Style(String style) {
+            this.style = style;
+        }
+        public void logo(ZC32Logo logo) {
+            System.out.println("网店风格:   " + style + "          logo:   "+logo.getLogo());
+        }
+    }
+</code></pre>
+<blockquote>
+<p>4.3非共享具体享元类ZC32Logo（logo类）</p>
+</blockquote>
+<pre><code>    public class ZC32Logo  {
+        private String logo;
+     
+        public ZC32Logo(String logo){
+              this.logo=logo;
+             }
+       
+         public String getLogo() {
+             return logo;
+    }}
+</code></pre>
+<blockquote>
+<p>4.4享元工厂类ZC32OnlineShopFactory（网店模板工厂类）</p>
+</blockquote>
+<pre><code>    import java.util.HashMap;
+     
+    public class ZC32OnlineShopFactory {    
+         private  HashMap&lt;String, ZC32OnlineShop&gt; shops=new HashMap&lt;String, ZC32OnlineShop&gt;();
+      
+          public ZC32OnlineShop GetStyle(String style){
+              ZC32OnlineShop shop=shops.get(style);
+             if(shop!=null){
+                  return shop;
+              }else{
+                  shop=new ZC32Style(style);
+                  shops.put(style, shop);
+                  return shop;
+              }
+          }
+       
+          public int getWebSiteNum(){
+              return shops.size();
+          }
+    }
+</code></pre>
+<blockquote>
+<p>4.5客户端测试类ZC32Client</p>
+</blockquote>
+<pre><code>    public class ZC32Client {
+        public static void main(String[] args){
+            ZC32OnlineShopFactory shop=new ZC32OnlineShopFactory();
+       
+            ZC32OnlineShop ZC32OnlineShop1=shop.GetStyle("服装类网店");
+            ZC32OnlineShop1.logo(new ZC32Logo("小明的服装"));
+            ZC32OnlineShop ZC32OnlineShop2=shop.GetStyle("服装类网店");
+            ZC32OnlineShop2.logo(new ZC32Logo("帅痞之家"));
+            ZC32OnlineShop ZC32OnlineShop3=shop.GetStyle("服装类网店");
+            ZC32OnlineShop3.logo(new ZC32Logo("男人的最爱"));
+       
+            ZC32OnlineShop ZC32OnlineShop4=shop.GetStyle("数码类网店");
+            ZC32OnlineShop4.logo(new ZC32Logo("华为"));
+            ZC32OnlineShop ZC32OnlineShop5=shop.GetStyle("数码类网店");
+            ZC32OnlineShop5.logo(new ZC32Logo("小米"));
+            ZC32OnlineShop ZC32OnlineShop6=shop.GetStyle("数码类网店");
+            ZC32OnlineShop6.logo(new ZC32Logo("OPPO"));
+       
+            System.out.println("得到所有网店总数为："+shop.getWebSiteNum());
+    }}
+</code></pre>
+<h2 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h2><p><img src="https://img-blog.csdnimg.cn/20201117201603697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
 
                 
             </div>
@@ -419,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cxc66.github.io/2022/04/02/meng-qi/">https://cxc66.github.io/2022/04/02/meng-qi/</a>
+                    <a href="https://cxc66.github.io/2020/11/25/design-pattern10/">https://cxc66.github.io/2020/11/25/design-pattern10/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -457,12 +571,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                    <span class="chip bg-color">JAVA面试题</span>
-                                </a>
-                            
-                                <a href="/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                                    <span class="chip bg-color">JAVA多线程</span>
+                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                                    <span class="chip bg-color">设计模式</span>
                                 </a>
                             
                         </div>
@@ -640,74 +750,25 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/03/ruan-jian-00/">
+                <a href="/2021/10/07/java01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="李跳跳">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="ArrayList 和 LinkedList 的区别是什么？">
                         
-                        <span class="card-title">李跳跳</span>
+                        <span class="card-title">ArrayList 和 LinkedList 的区别是什么？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            李跳跳
+                            综合来说，在需要频繁读取集合中的元素时，更推荐使用 ArrayList，而在插入和删除操作较多时，更推荐使用 LinkedList。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AE%89%E5%8D%93APP/" class="post-category">
-                                    安卓APP
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%AE%89%E5%8D%93APP/">
-                        <span class="chip bg-color">安卓APP</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/03/21/java04/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="三次握手 四次挥手">
-                        
-                        <span class="card-title">三次握手 四次挥手</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-21
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -727,8 +788,57 @@
                         <span class="chip bg-color">JAVA面试题</span>
                     </a>
                     
-                    <a href="/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-                        <span class="chip bg-color">JAVA多线程</span>
+                    <a href="/tags/JAVA%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">JAVA集合框架</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/23/design-pattern09/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="组合模式之对购物网站">
+                        
+                        <span class="card-title">组合模式之对购物网站</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            组合模式（Composite Pattern），又叫部分整体模式，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示部分以及整体层次。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                        <span class="chip bg-color">设计模式</span>
                     </a>
                     
                 </div>

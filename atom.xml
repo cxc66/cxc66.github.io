@@ -42,33 +42,6 @@
   </entry>
   
   <entry>
-    <title>梦奇</title>
-    <link href="https://cxc66.github.io/2022/04/02/meng-qi/"/>
-    <id>https://cxc66.github.io/2022/04/02/meng-qi/</id>
-    <published>2022-04-02T15:25:45.000Z</published>
-    <updated>2022-04-05T12:05:41.466Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;什么是梦奇？&quot;&gt;&lt;a href=&quot;#什么是梦奇？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
-    
-    
-    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    <category term="JAVA多线程" scheme="https://cxc66.github.io/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>三次握手 四次挥手</title>
     <link href="https://cxc66.github.io/2022/03/21/java04/"/>
     <id>https://cxc66.github.io/2022/03/21/java04/</id>
@@ -254,6 +227,256 @@
     <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     <category term="JAVA集合框架" scheme="https://cxc66.github.io/tags/JAVA%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>享元模式之网店模板</title>
+    <link href="https://cxc66.github.io/2020/11/25/design-pattern10/"/>
+    <id>https://cxc66.github.io/2020/11/25/design-pattern10/</id>
+    <published>2020-11-25T05:26:24.000Z</published>
+    <updated>2022-04-06T12:31:59.392Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;享元模式之网店模板&quot;&gt;&lt;a href=&quot;#享元模式之网店模板&quot; class=&quot;headerlink&quot; title=&quot;享元模式之网店模板&quot;&gt;&lt;/a&gt;享元模式之网店模板&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组合模式之对购物网站</title>
+    <link href="https://cxc66.github.io/2020/11/23/design-pattern09/"/>
+    <id>https://cxc66.github.io/2020/11/23/design-pattern09/</id>
+    <published>2020-11-23T15:26:24.000Z</published>
+    <updated>2022-04-06T12:26:07.033Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;组合模式之对购物网站&quot;&gt;&lt;a href=&quot;#组合模式之对购物网站&quot; class=&quot;headerlink&quot; title=&quot;组合模式之对购物网站&quot;&gt;&lt;/a&gt;组合模式之对购物网站&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>装饰者模式之相亲（男人的描述）</title>
+    <link href="https://cxc66.github.io/2020/11/23/design-pattern08/"/>
+    <id>https://cxc66.github.io/2020/11/23/design-pattern08/</id>
+    <published>2020-11-23T10:26:24.000Z</published>
+    <updated>2022-04-06T12:20:27.441Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;装饰者模式之相亲（男人的描述）&quot;&gt;&lt;a href=&quot;#装饰者模式之相亲（男人的描述）&quot; class=&quot;headerlink&quot; title=&quot;装饰者模式之相亲（男人的描述）&quot;&gt;&lt;/a&gt;装饰者模式之相亲（男人的描述）&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>适配器模式之购物车商品推荐</title>
+    <link href="https://cxc66.github.io/2020/11/22/design-pattern07/"/>
+    <id>https://cxc66.github.io/2020/11/22/design-pattern07/</id>
+    <published>2020-11-22T10:26:24.000Z</published>
+    <updated>2022-04-06T12:13:46.921Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;适配器模式之购物车商品推荐&quot;&gt;&lt;a href=&quot;#适配器模式之购物车商品推荐&quot; class=&quot;headerlink&quot; title=&quot;适配器模式之购物车商品推荐&quot;&gt;&lt;/a&gt;适配器模式之购物车商品推荐&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>桥接模式之消息发送</title>
+    <link href="https://cxc66.github.io/2020/11/21/design-pattern06/"/>
+    <id>https://cxc66.github.io/2020/11/21/design-pattern06/</id>
+    <published>2020-11-21T10:26:24.000Z</published>
+    <updated>2022-04-06T12:07:39.876Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;桥接模式之消息发送&quot;&gt;&lt;a href=&quot;#桥接模式之消息发送&quot; class=&quot;headerlink&quot; title=&quot;桥接模式之消息发送&quot;&gt;&lt;/a&gt;桥接模式之消息发送&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单例模式之网站计算器</title>
+    <link href="https://cxc66.github.io/2020/11/20/design-pattern05/"/>
+    <id>https://cxc66.github.io/2020/11/20/design-pattern05/</id>
+    <published>2020-11-20T01:26:24.000Z</published>
+    <updated>2022-04-06T12:02:15.886Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;单例模式之网站计算器&quot;&gt;&lt;a href=&quot;#单例模式之网站计算器&quot; class=&quot;headerlink&quot; title=&quot;单例模式之网站计算器&quot;&gt;&lt;/a&gt;单例模式之网站计算器&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原型模式之克隆一个图形对象（圆形和矩形）</title>
+    <link href="https://cxc66.github.io/2020/11/19/design-pattern04/"/>
+    <id>https://cxc66.github.io/2020/11/19/design-pattern04/</id>
+    <published>2020-11-19T11:06:24.000Z</published>
+    <updated>2022-04-06T12:02:24.088Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;原型模式之克隆一个图形对象（圆形和矩形）&quot;&gt;&lt;a href=&quot;#原型模式之克隆一个图形对象（圆形和矩形）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>抽象工厂模式之手机主题</title>
+    <link href="https://cxc66.github.io/2020/11/18/design-pattern03/"/>
+    <id>https://cxc66.github.io/2020/11/18/design-pattern03/</id>
+    <published>2020-11-18T11:06:24.000Z</published>
+    <updated>2022-04-06T12:02:35.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;抽象工厂模式之手机主题&quot;&gt;&lt;a href=&quot;#抽象工厂模式之手机主题&quot; class=&quot;headerlink&quot; title=&quot;抽象工厂模式之手机主题&quot;&gt;&lt;/a&gt;抽象工厂模式之手机主题&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用工厂方法模式实现四则计算器</title>
+    <link href="https://cxc66.github.io/2020/11/17/design-pattern01/"/>
+    <id>https://cxc66.github.io/2020/11/17/design-pattern01/</id>
+    <published>2020-11-17T15:25:45.000Z</published>
+    <updated>2022-04-06T12:02:53.991Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;用工厂方法模式实现四则计算器&quot;&gt;&lt;a href=&quot;#用工厂方法模式实现四则计算器&quot; class=&quot;headerlink&quot; title=&quot;用工厂方法模式实现四则计算器&quot;&gt;&lt;/a&gt;用工厂方法模式实现四则计算器&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建造者模式之儿童餐</title>
+    <link href="https://cxc66.github.io/2020/11/17/design-pattern02/"/>
+    <id>https://cxc66.github.io/2020/11/17/design-pattern02/</id>
+    <published>2020-11-17T10:37:24.000Z</published>
+    <updated>2022-04-06T12:02:45.119Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;建造者模式之儿童餐&quot;&gt;&lt;a href=&quot;#建造者模式之儿童餐&quot; class=&quot;headerlink&quot; title=&quot;建造者模式之儿童餐&quot;&gt;&lt;/a&gt;建造者模式之儿童餐&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
