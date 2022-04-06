@@ -6,7 +6,7 @@
   <link href="https://cxc66.github.io/atom.xml" rel="self"/>
   
   <link href="https://cxc66.github.io/"/>
-  <updated>2022-04-05T12:05:41.466Z</updated>
+  <updated>2022-04-05T14:14:12.341Z</updated>
   <id>https://cxc66.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>李跳跳</title>
+    <link href="https://cxc66.github.io/2022/04/03/ruan-jian-00/"/>
+    <id>https://cxc66.github.io/2022/04/03/ruan-jian-00/</id>
+    <published>2022-04-03T15:25:45.000Z</published>
+    <updated>2022-04-05T14:14:12.341Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是李跳跳？&quot;&gt;&lt;a href=&quot;#什么是李跳跳？&quot; class=&quot;headerlink&quot; title=&quot;什么是李跳跳？&quot;&gt;&lt;/a&gt;什么是李跳跳？&lt;/h1&gt;&lt;p&gt;李跳跳是安卓神器，一个能帮助你自动跳过手机软件启动页广告的APP.&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="安卓APP" scheme="https://cxc66.github.io/categories/%E5%AE%89%E5%8D%93APP/"/>
+    
+    
+    <category term="安卓APP" scheme="https://cxc66.github.io/tags/%E5%AE%89%E5%8D%93APP/"/>
+    
+  </entry>
   
   <entry>
     <title>梦奇</title>
@@ -102,7 +127,7 @@
     <link href="https://cxc66.github.io/2021/12/21/java02/"/>
     <id>https://cxc66.github.io/2021/12/21/java02/</id>
     <published>2021-12-21T01:25:05.000Z</published>
-    <updated>2022-04-05T11:20:56.970Z</updated>
+    <updated>2022-04-05T14:10:59.019Z</updated>
     
     
       
@@ -118,9 +143,9 @@
     <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
     
     
-    <category term="JAVA基础" scheme="https://cxc66.github.io/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
     <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="JAVA基础" scheme="https://cxc66.github.io/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -145,9 +170,9 @@
     <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
     
     
-    <category term="JAVA基础" scheme="https://cxc66.github.io/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
-    
     <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="JAVA基础" scheme="https://cxc66.github.io/tags/JAVA%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -183,7 +208,7 @@
     <link href="https://cxc66.github.io/2021/10/07/java01/"/>
     <id>https://cxc66.github.io/2021/10/07/java01/</id>
     <published>2021-10-07T01:25:05.000Z</published>
-    <updated>2022-04-05T10:59:23.242Z</updated>
+    <updated>2022-04-05T13:22:49.832Z</updated>
     
     
       
@@ -199,9 +224,9 @@
     <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
     
     
-    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
     <category term="JAVA集合框架" scheme="https://cxc66.github.io/tags/JAVA%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
