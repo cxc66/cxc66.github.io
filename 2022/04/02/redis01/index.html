@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="抽象工厂模式之手机主题, chaos超">
-    <meta name="description" content="抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。">
+    <meta name="keywords" content="什么是Redis, chaos超">
+    <meta name="description" content="Java中的线程池是运用场景最多的并发框架，几乎所有需要异步或并发执行任务的程序都可以使用线程池。在开发过程中，合理地使用线程池能够带来许多好处。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>抽象工厂模式之手机主题 | chaos超</title>
+    <title>什么是Redis | chaos超</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">抽象工厂模式之手机主题</h1>
+                    <h1 class="description center-align post-title">什么是Redis</h1>
                 </div>
             </div>
         </div>
@@ -339,8 +339,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                <span class="chip bg-color">设计模式</span>
+                            <a href="/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                <span class="chip bg-color">JAVA面试题</span>
+                            </a>
+                        
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
                             </a>
                         
                     </div>
@@ -364,7 +368,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-18
+                    2022-04-02
                 </div>
                 
 
@@ -388,296 +392,83 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="抽象工厂模式之手机主题"><a href="#抽象工厂模式之手机主题" class="headerlink" title="抽象工厂模式之手机主题"></a>抽象工厂模式之手机主题</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>抽象工厂模式（Abstract Factory Pattern）是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。<br>在抽象工厂模式中，接口是负责创建一个相关对象的工厂，不需要显式指定它们的类。每个生成的工厂都能按照工厂模式提供对象。</p>
+                <h1 id="什么是Redis？"><a href="#什么是Redis？" class="headerlink" title="什么是Redis？"></a>什么是Redis？</h1><blockquote>
+<p>Redis 是一个使用 C 语言写成的，开源的高性能key-value非关系缓存数据库。它支持存储的value类型相对更多，包括string(字符串)、list(链表)、set(集合)、zset(sorted set –有序集合)和hash（哈希类型）。Redis的数据都基于缓存的，所以很快，每秒可以处理超过 10万次读写操作，是已知性能最快的Key-Value DB。Redis也可以实现数据写入磁盘中，保证了数据的安全不丢失，而且Redis的操作是原子性的。</p>
 </blockquote>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
-<p><strong>意图：</strong> 提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</p>
-</blockquote>
+<h1 id="Redis有哪些优缺点？"><a href="#Redis有哪些优缺点？" class="headerlink" title="Redis有哪些优缺点？"></a>Redis有哪些优缺点？</h1><p><strong>优点</strong></p>
 <blockquote>
-<p><strong>主要解决：</strong> 主要解决接口选择的问题。</p>
+<ol>
+<li>读写性能优异， Redis能读的速度是110000次/s，写的速度是81000次/s。</li>
+<li>支持数据持久化，支持AOF和RDB两种持久化方式。</li>
+<li>支持事务，Redis的所有操作都是原子性的，同时Redis还支持对几个操作合并后的原子性执行。</li>
+<li>数据结构丰富，除了支持string类型的value外还支持hash、set、zset、list等数据结构。</li>
+<li>支持主从复制，主机会自动将数据同步到从机，可以进行读写分离。</li>
+</ol>
 </blockquote>
+<p><strong>缺点</strong></p>
 <blockquote>
-<p><strong>何时使用：</strong> 系统的产品有多于一个的产品族，而系统只消费其中某一族的产品。</p>
+<ol>
+<li>数据库容量受到物理内存的限制，不能用作海量数据的高性能读写，因此Redis适合的场景主要局限在较小数据量的高性能操作和运算上。</li>
+<li>Redis 不具备自动容错和恢复功能，主机从机的宕机都会导致前端部分读写请求失败，需要等待机器重启或者手动切换前端的IP才能恢复。</li>
+<li>支持事务，Redis的所有操作都是原子性的，同时Redis还支持对几个操作合并后的原子性执行。</li>
+<li>主机宕机，宕机前有部分数据未能及时同步到从机，切换IP后还会引入数据不一致的问题，降低了系统的可用性。</li>
+<li>Redis 较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。为避免这一问题，运维人员在系统上线时必须确保有足够的空间，这对资源造成了很大的浪费。</li>
+</ol>
 </blockquote>
+<p><strong>Redis有哪些数据类型</strong></p>
 <blockquote>
-<p><strong>如何解决：</strong> 在一个产品族里面，定义多个产品。</p>
+<p>Redis主要有5种数据类型，包括String，List，Set，Zset，Hash，满足大部分的使用要求</p>
 </blockquote>
+<p><strong>Redis持久化</strong><br>什么是Redis持久化？ 持久化就是把内存的数据写到磁盘中去，防止服务宕机了内存数据丢失。</p>
+<p><strong>Redis 的持久化机制是什么？各自的优缺点？</strong><br>Redis 提供两种持久化机制 RDB（默认） 和 AOF 机制:</p>
+<p><strong>RDB：是Redis DataBase缩写快照</strong></p>
 <blockquote>
-<p><strong>关键代码：</strong> 在一个工厂里聚合多个同类产品。</p>
+<p>RDB是Redis默认的持久化方式。按照一定的时间将内存的数据以快照的形式保存到硬盘中，对应产生的数据文件为dump.rdb。通过配置文件中的save参数来定义快照的周期。<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy80MDU1NjY2LWMwNzAyMjIzMTUxODUyMjkucG5n?x-oss-process=image/format,png"></p>
 </blockquote>
+<p><strong>优点：</strong></p>
 <blockquote>
-<p><strong>应用实例：</strong> 工作了，为了参加一些聚会，肯定有两套或多套衣服吧，比如说有商务装（成套，一系列具体产品）、时尚装（成套，一系列具体产品），甚至对于一个家庭来说，可能有商务女装、商务男装、时尚女装、时尚男装，这些也都是成套的，即一系列具体产品。假设一种情况（现实中是不存在的，要不然，没法进入共产主义了，但有利于说明抽象工厂模式），在您的家中，某一个衣柜（具体工厂）只能存放某一种这样的衣服（成套，一系列具体产品），每次拿这种成套的衣服时也自然要从这个衣柜中取出了。用 OOP 的思想去理解，所有的衣柜（具体工厂）都是衣柜类的（抽象工厂）某一个，而每一件成套的衣服又包括具体的上衣（某一具体产品），裤子（某一具体产品），这些具体的上衣其实也都是上衣（抽象产品），具体的裤子也都是裤子（另一个抽象产品）。</p>
+<p>1、只有一个文件 dump.rdb，方便持久化。<br>2、容灾性好，一个文件可以保存到安全的磁盘。<br>3、性能最大化，fork 子进程来完成写操作，让主进程继续处理命令，所以是 IO 最大化。使用单独子进程来进行持久化，主进程不会进行任何 IO 操作，保证了 redis 的高性能<br>4.相对于数据集大时，比 AOF 的启动效率更高。</p>
 </blockquote>
+<p><strong>缺点：</strong></p>
 <blockquote>
-<p>**优点： ** 当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。</p>
+<p>1、数据安全性低。RDB 是间隔一段时间进行持久化，如果持久化之间 redis 发生故障，会发生数据丢失。所以这种方式更适合数据要求不严谨的时候)<br>2、AOF（Append-only file)持久化方式： 是指所有的命令行记录以 redis 命令请 求协议的格式完全持久化存储)保存为 aof 文件。</p>
 </blockquote>
+<p><strong>AOF：持久化：</strong></p>
 <blockquote>
-<p><strong>缺点：</strong> 产品族扩展非常困难，要增加一个系列的某一产品，既要在抽象的 Creator 里加代码，又要在具体的里面加代码。</p>
+<p>AOF持久化(即Append Only File持久化)，则是将Redis执行的每次写命令记录到单独的日志文件中，当重启Redis会重新将持久化的日志中文件恢复数据。</p>
+<p>当两种方式同时开启时，数据恢复Redis会优先选择AOF恢复<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy80MDU1NjY2LWUxN2NlNTY0NGZjN2FjZjMucG5n?x-oss-process=image/format,png"></p>
 </blockquote>
+<p><strong>优点：</strong></p>
 <blockquote>
-<p>**使用场景： ** 1、QQ 换皮肤，一整套一起换。 2、生成不同操作系统的程序。</p>
+<p>1、数据安全，aof 持久化可以配置 appendfsync 属性，有 always，每进行一次 命令操作就记录到 aof 文件中一次。<br>2、通过 append 模式写文件，即使中途服务器宕机，可以通过 redis-check-aof 工具解决数据一致性问题。<br>3、AOF 机制的 rewrite 模式。AOF 文件没被 rewrite 之前（文件过大时会对命令 进行合并重写），可以删除其中的某些命令（比如误操作的 flushall）)</p>
 </blockquote>
+<p><strong>缺点：</strong></p>
 <blockquote>
-<p><strong>注意事项：</strong> 产品族难扩展，产品等级易扩展。</p>
+<p>1、AOF 文件比 RDB 文件大，且恢复速度慢。<br>2、数据集大的时候，比 rdb 启动效率低。</p>
 </blockquote>
-<h2 id="1、-实例概况"><a href="#1、-实例概况" class="headerlink" title="1、 实例概况"></a>1、 实例概况</h2><blockquote>
-<p>某手机操作系统可以根据用户不同的喜好在2种主题之间进行切换，随着主题的变化，系统中的字体、app图标、壁纸、锁屏壁纸等元素会随之发生变化。</p>
-</blockquote>
+<p><strong>俩种持久化的优缺点是什么？</strong></p>
 <blockquote>
-<p>（1）请使用抽象工厂模式设计系统</p>
+<ol>
+<li>AOF文件比RDB更新频率高，优先使用AOF还原数据。</li>
+<li>AOF比RDB更安全也更大</li>
+<li>RDB性能比AOF好</li>
+<li>如果两个都配了优先加载AOF</li>
+</ol>
 </blockquote>
+<p><strong>缓存雪崩</strong><br><em>缓存雪崩是指缓存同一时间大面积的失效，所以，后面的请求都会落到数据库上，造成数据库短时间内承受大量请求而崩掉。</em></p>
+<p><em>解决方案</em></p>
 <blockquote>
-<p>（2）为系统增加一种新的主题，并实现</p>
+<p>缓存数据的过期时间设置随机，防止同一时间大量数据过期现象发生。<br>一般并发量不是特别多的时候，使用最多的解决方案是加锁排队。<br>给每一个缓存数据增加相应的缓存标记，记录缓存的是否失效，如果缓存标记失效，则更新数据缓存。</p>
 </blockquote>
+<p><strong>缓存穿透</strong><br><em>缓存穿透是指缓存和数据库中都没有的数据，导致所有的请求都落到数据库上，造成数据库短时间内承受大量请求而崩掉。</em></p>
+<p><em>解决方案</em></p>
 <blockquote>
-<p>（3）如果当系统主题发生变化的时候通讯录风格也发生变化，在这种情况之下上面设计的系统将如何变化？</p>
+<p>接口层增加校验，如用户鉴权校验，id做基础校验，id&lt;=0的直接拦截；<br>从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反复用同一个id暴力攻击<br>采用布隆过滤器，将所有可能存在的数据哈希到一个足够大的 bitmap 中，一个一定不存在的数据会被这个 bitmap 拦截掉，从而避免了对底层存储系统的查询压力</p>
 </blockquote>
+<p><strong>缓存击穿</strong><br><em>缓存击穿是指缓存中没有但数据库中有的数据（一般是缓存时间到期），这时由于并发用户特别多，同时读缓存没读到数据，又同时去数据库去取数据，引起数据库压力瞬间增大，造成过大压力。和缓存雪崩不同的是，缓存击穿指并发查同一条数据，缓存雪崩是不同数据都过期了，很多数据都查不到从而查数据库。</em></p>
+<p><em>解决方案</em></p>
 <blockquote>
-<p>（4）（2）和（3）的结论说明了什么？</p>
-</blockquote>
-<h2 id="实例类图"><a href="#实例类图" class="headerlink" title="实例类图"></a>实例类图</h2><p><img src="https://img-blog.csdnimg.cn/20201117184331121.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"></p>
-<h2 id="实例实现代码"><a href="#实例实现代码" class="headerlink" title="实例实现代码"></a>实例实现代码</h2><blockquote>
-<p>3.1抽象产品类ZC32Typeface（字体类）</p>
-</blockquote>
-<pre><code>    public interface ZC32Typeface {
-        public void changeTypeface();
-    }
-</code></pre>
-<blockquote>
-<p>3.11具体产品类ZC32Typeface1（字体1类）</p>
-</blockquote>
-<pre><code>    public class ZC32Typeface1 implements ZC32Typeface{
-        public void changeTypeface() {
-            System.out.println("字体1已应用！");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.12具体产品类ZC32Typeface2（字体2类）</p>
-</blockquote>
-<pre><code>    public class ZC32Typeface2 implements ZC32Typeface{
-    public void changeTypeface() {
-        System.out.println("字体2已应用！");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.2抽象产品类ZC32Wallpaper（壁纸类）</p>
-</blockquote>
-<pre><code>public interface ZC32Wallpaper {
-    public void changeWallpaper();
-}
-</code></pre>
-<blockquote>
-<p>3.21具体产品类ZC32Wallpaper1（壁纸1类）</p>
-</blockquote>
-<pre><code>    public class ZC32Wallpaper1 implements ZC32Wallpaper{
-    public void changeWallpaper() {
-        System.out.println("壁纸1已应用！");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.22具体产品类ZC32Wallpaper2（壁纸2类）</p>
-</blockquote>
-<pre><code>public class ZC32Wallpaper2 implements ZC32Wallpaper{
-public void changeWallpaper() {
-    System.out.println("壁纸2已应用！");
-    }
-}
-</code></pre>
-<blockquote>
-<p>3.3抽象产品类ZC32LSWallpaper（锁屏壁纸类）</p>
-</blockquote>
-<pre><code>    public interface ZC32LSWallpaper {
-        public void changeLSWallpaper();
-    }
-</code></pre>
-<blockquote>
-<p>3.31具体产品类ZC32LSWallpaper1（锁屏壁纸1类）</p>
-</blockquote>
-<pre><code>    public class ZC32Wallpaper1  implements ZC32LSWallpaper{
-        public void changeLSWallpaper() {
-            System.out.println("锁屏壁纸1已应用！");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.32具体产品类ZC32LSWallpaper2（锁屏壁纸2类）</p>
-</blockquote>
-<pre><code>    public class ZC32Wallpaper2 {
-        public void changeLSWallpaper()  implements ZC32LSWallpaper{
-            System.out.println("锁屏壁纸2已应用！");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.4抽象产品类ZC32Lcon（图标类）</p>
-</blockquote>
-<pre><code>    public interface ZC32Lcon {
-        public void changeLcon();
-    }
-</code></pre>
-<blockquote>
-<p>3.41抽具体产品类ZC32Lcon1（图标1类）</p>
-</blockquote>
-<pre><code>    public class ZC32Lcon1 {
-        public void changeLcon() implements ZC32Lcon{
-            System.out.println("图标1已应用！");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.42抽具体产品类ZC32Lcon2（图标2类）</p>
-</blockquote>
-<pre><code>    public class ZC32Lcon2 {
-        public void changeLcon() implements ZC32Lcon{
-            System.out.println("图标2已应用！");
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.5抽象工厂类ZC32TitleFactory（主题工厂类）</p>
-</blockquote>
-<pre><code>    public interface ZC32TitleFactory {
-        public ZC32Typeface produceTypeface();
-        public ZC32Wallpaper produceWallpaper();
-        public ZC32LSWallpaper produceLSWallpaper();
-        public ZC32Lcon produceLcon();
-    }
-</code></pre>
-<blockquote>
-<p>3.51具体工厂类ZC32TitleFactory1（主题工厂1类）</p>
-</blockquote>
-<pre><code>    public class ZC32TitleFactory1 implements ZC32TitleFactory{
-        public ZC32Typeface produceTypeface() {
-            return new  ZC32Typeface1();
-        }
-        public ZC32Wallpaper produceWallpaper() {
-            return  new ZC32Wallpaper1();
-        }
-        public ZC32LSWallpaper produceLSWallpaper() {
-            return  new ZC32LSWallpaper1();
-        }
-        public ZC32Lcon produceLcon() {
-            return new ZC32Lcon1();
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.52具体工厂类ZC32TitleFactory2（主题工厂2类）</p>
-</blockquote>
-<pre><code>    public class ZC32TitleFactory2 implements ZC32TitleFactory{
-        public ZC32Typeface produceTypeface() {
-            return new  ZC32Typeface2();
-        }
-        public ZC32Wallpaper produceWallpaper() {
-            return  new ZC32Wallpaper2();
-        }
-        public ZC32LSWallpaper produceLSWallpaper() {
-            return  new ZC32LSWallpaper2();
-        }
-        public ZC32Lcon produceLcon() {
-            return new ZC32Lcon2();
-        }
-    }
-</code></pre>
-<blockquote>
-<p>3.6客户端测试类ZC32Client</p>
-</blockquote>
-<pre><code>    public class ZC32Client {
-        public static void main(String args[]) {
-            try
-            {
-                ZC32TitleFactory factory;
-                ZC32Typeface typeface;
-                ZC32Wallpaper wallpaper;
-                ZC32LSWallpaper lSWallpaper;
-                ZC32Lcon lcon ;
-                factory=(ZC32TitleFactory)XMLUtil.getBean();
-                typeface=factory.produceTypeface();
-                typeface.changeTypeface();
-                wallpaper=factory.produceWallpaper();
-                wallpaper.changeWallpaper();
-                lSWallpaper=factory.produceLSWallpaper();
-                lSWallpaper.changeLSWallpaper();
-                lcon=factory.produceLcon();
-                lcon.changeLcon();
-            }
-            catch(Exception e) {
-                System.out.print("sssss");
-                System.out.print(e.getMessage());
-            }
-        }
-    }
-</code></pre>
-<h2 id="4、辅助代码"><a href="#4、辅助代码" class="headerlink" title="4、辅助代码"></a>4、辅助代码</h2><blockquote>
-<p>4.1XML操作工具类XMLUtil</p>
-</blockquote>
-<pre><code>    import java.io.*;
-    import javax.xml.parsers.*;
-    import org.w3c.dom.*;
-     
-    public class XMLUtil {
-        public static Object getBean() {
-            try {
-                //创建DOM文档对象
-                DocumentBuilderFactory dFactory =DocumentBuilderFactory.newInstance();
-                DocumentBuilder builder =dFactory.newDocumentBuilder();
-                Document doc;
-                doc=builder.parse(new File("config.xml"));
-                
-                NodeList nl=doc.getElementsByTagName("className");
-                Node classNode=nl.item(0).getFirstChild();
-                String cName=classNode.getNodeValue();
-                
-                Class c=Class.forName(cName);
-                Object obj=c.newInstance();
-                return obj;
-            }
-            catch(Exception e)
-            {
-                e.printStackTrace();
-                return null;
-            }
-        }
-    }    
-</code></pre>
-<blockquote>
-<p>4.2配置文件config.xml</p>
-</blockquote>
-<pre><code>    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-    &lt;config&gt;
-        &lt;className&gt;ZC32SubMealBuilderB&lt;/className&gt;
-    &lt;/config&gt;
-</code></pre>
-<h2 id="5、结果"><a href="#5、结果" class="headerlink" title="5、结果"></a>5、结果</h2><blockquote>
-<p>5.1（第一问）通过修改配置文件config.xml得到不同结果<br><img src="https://img-blog.csdnimg.cn/20201117190110149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODk4MjIy,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20201117190137897.png"></p>
-</blockquote>
-<blockquote>
-<p>5.2第二问）通过添加具体工厂3再修改配置文件config.xml得到结果具体工厂类ZC32TitleFactory3（主题工厂3类）</p>
-</blockquote>
-<pre><code>    public class ZC32TitleFactory3 implements ZC32TitleFactory{
-        public ZC32Typeface produceTypeface() {
-            return new  ZC32Typeface2();
-        }
-        public ZC32Wallpaper produceWallpaper() {
-            return  new ZC32Wallpaper1();
-        }
-        public ZC32LSWallpaper produceLSWallpaper() {
-            return  new ZC32LSWallpaper1();
-        }
-        public ZC32Lcon produceLcon() {
-            return new ZC32Lcon2();
-        }
-    }
-</code></pre>
-<blockquote>
-<p>5.3（第三问）在主题里建立一个通讯录的产品，然后加入一个新的工厂类-通讯录类即可，原有代码需要有较大的修改。</p>
-</blockquote>
-<blockquote>
-<p>5.4（第四问） 在抽象工厂模式里，如果只是增加一个新的产品，比如改题目增加一个主题，只需要增加相应的具体工厂就行，再将配置文件里的具体工程类类名改成新增的工厂类类名，原有代码无需修改，但是要增加一种新的产品，即通讯录也随主题变化而变化，那么原有类名需要较大的修改，在抽象工厂里需要声明一个通讯录的方法，所有的具体工厂类都需要实现该方法，将导致系统不再符合“开放原则”。</p>
+<p>设置热点数据永远不过期。<br>加互斥锁，互斥锁</p>
 </blockquote>
 
                 
@@ -705,7 +496,7 @@ public void changeWallpaper() {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cxc66.github.io/2020/11/18/design-pattern03/">https://cxc66.github.io/2020/11/18/design-pattern03/</a>
+                    <a href="https://cxc66.github.io/2022/04/02/redis01/">https://cxc66.github.io/2022/04/02/redis01/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -743,8 +534,12 @@ public void changeWallpaper() {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                                    <span class="chip bg-color">设计模式</span>
+                                <a href="/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                    <span class="chip bg-color">JAVA面试题</span>
+                                </a>
+                            
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
                                 </a>
                             
                         </div>
@@ -918,29 +713,30 @@ public void changeWallpaper() {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/19/design-pattern04/">
+                <a href="/2022/04/02/redis01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="原型模式之克隆一个图形对象（圆形和矩形）">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="什么是Redis">
                         
-                        <span class="card-title">原型模式之克隆一个图形对象（圆形和矩形）</span>
+                        <span class="card-title">什么是Redis</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            原型模式（Prototype Pattern）是用于创建重复的对象，同时又能保证性能。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+                            Java中的线程池是运用场景最多的并发框架，几乎所有需要异步或并发执行任务的程序都可以使用线程池。在开发过程中，合理地使用线程池能够带来许多好处。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -953,11 +749,16 @@ public void changeWallpaper() {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
+                    <a href="/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">JAVA面试题</span>
+                    </a>
+                    
+                    <a href="/tags/redis/">
+                        <span class="chip bg-color">redis</span>
                     </a>
                     
                 </div>
@@ -971,24 +772,24 @@ public void changeWallpaper() {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/17/design-pattern01/">
+                <a href="/2022/03/21/java04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="用工厂方法模式实现四则计算器">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="三次握手 四次挥手">
                         
-                        <span class="card-title">用工厂方法模式实现四则计算器</span>
+                        <span class="card-title">三次握手 四次挥手</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            工厂模式（Factory Pattern）是 Java 中最常用的设计模式之一。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-21
                             </span>
                         <span class="publish-author">
                             
@@ -1005,8 +806,12 @@ public void changeWallpaper() {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
+                    <a href="/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">JAVA面试题</span>
+                    </a>
+                    
+                    <a href="/tags/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">JAVA多线程</span>
                     </a>
                     
                 </div>

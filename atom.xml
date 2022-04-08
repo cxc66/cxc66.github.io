@@ -6,7 +6,7 @@
   <link href="https://cxc66.github.io/atom.xml" rel="self"/>
   
   <link href="https://cxc66.github.io/"/>
-  <updated>2022-04-05T14:14:12.341Z</updated>
+  <updated>2022-04-08T07:48:32.720Z</updated>
   <id>https://cxc66.github.io/</id>
   
   <author>
@@ -17,27 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>李跳跳</title>
-    <link href="https://cxc66.github.io/2022/04/03/ruan-jian-00/"/>
-    <id>https://cxc66.github.io/2022/04/03/ruan-jian-00/</id>
-    <published>2022-04-03T15:25:45.000Z</published>
-    <updated>2022-04-05T14:14:12.341Z</updated>
+    <title>什么是Redis</title>
+    <link href="https://cxc66.github.io/2022/04/02/redis01/"/>
+    <id>https://cxc66.github.io/2022/04/02/redis01/</id>
+    <published>2022-04-02T15:25:45.000Z</published>
+    <updated>2022-04-08T07:48:32.720Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;什么是李跳跳？&quot;&gt;&lt;a href=&quot;#什么是李跳跳？&quot; class=&quot;headerlink&quot; title=&quot;什么是李跳跳？&quot;&gt;&lt;/a&gt;什么是李跳跳？&lt;/h1&gt;&lt;p&gt;李跳跳是安卓神器，一个能帮助你自动跳过手机软件启动页广告的APP.&lt;br&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;什么是Redis？&quot;&gt;&lt;a href=&quot;#什么是Redis？&quot; class=&quot;headerlink&quot; title=&quot;什么是Redis？&quot;&gt;&lt;/a&gt;什么是Redis？&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Redis 是一个使用 C</summary>
         
       
     
     
     
-    <category term="安卓APP" scheme="https://cxc66.github.io/categories/%E5%AE%89%E5%8D%93APP/"/>
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
     
     
-    <category term="安卓APP" scheme="https://cxc66.github.io/tags/%E5%AE%89%E5%8D%93APP/"/>
+    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="redis" scheme="https://cxc66.github.io/tags/redis/"/>
     
   </entry>
   
@@ -154,7 +157,7 @@
     <link href="https://cxc66.github.io/2021/11/01/java00/"/>
     <id>https://cxc66.github.io/2021/11/01/java00/</id>
     <published>2021-11-01T05:25:08.000Z</published>
-    <updated>2022-04-05T11:09:42.746Z</updated>
+    <updated>2022-04-07T04:50:22.805Z</updated>
     
     
       
