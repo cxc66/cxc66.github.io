@@ -6,7 +6,7 @@
   <link href="https://cxc66.github.io/atom.xml" rel="self"/>
   
   <link href="https://cxc66.github.io/"/>
-  <updated>2022-07-01T15:17:37.421Z</updated>
+  <updated>2022-07-01T15:24:50.831Z</updated>
   <id>https://cxc66.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>最长公共前缀</title>
+    <link href="https://cxc66.github.io/2022/07/01/likou002/"/>
+    <id>https://cxc66.github.io/2022/07/01/likou002/</id>
+    <published>2022-07-01T15:25:45.000Z</published>
+    <updated>2022-07-01T15:24:50.831Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;最长公共前缀&quot;&gt;&lt;a href=&quot;#最长公共前缀&quot; class=&quot;headerlink&quot; title=&quot;最长公共前缀&quot;&gt;&lt;/a&gt;最长公共前缀&lt;/h2&gt;&lt;p&gt;编写一个函数来查找字符串数组中的最长公共前缀。&lt;/p&gt;
+&lt;p&gt;如果不存在公共前缀，返回空字符串</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="力扣" scheme="https://cxc66.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>罗马数字转整数</title>
     <link href="https://cxc66.github.io/2022/07/01/likou001/"/>
     <id>https://cxc66.github.io/2022/07/01/likou001/</id>
     <published>2022-07-01T13:25:45.000Z</published>
-    <updated>2022-07-01T15:17:37.421Z</updated>
+    <updated>2022-07-01T15:26:24.671Z</updated>
     
     
       
@@ -496,31 +522,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;抽象工厂模式之手机主题&quot;&gt;&lt;a href=&quot;#抽象工厂模式之手机主题&quot; class=&quot;headerlink&quot; title=&quot;抽象工厂模式之手机主题&quot;&gt;&lt;/a&gt;抽象工厂模式之手机主题&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
-    
-    
-    <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用工厂方法模式实现四则计算器</title>
-    <link href="https://cxc66.github.io/2020/11/17/design-pattern01/"/>
-    <id>https://cxc66.github.io/2020/11/17/design-pattern01/</id>
-    <published>2020-11-17T15:25:45.000Z</published>
-    <updated>2022-04-06T12:02:53.991Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;用工厂方法模式实现四则计算器&quot;&gt;&lt;a href=&quot;#用工厂方法模式实现四则计算器&quot; class=&quot;headerlink&quot; title=&quot;用工厂方法模式实现四则计算器&quot;&gt;&lt;/a&gt;用工厂方法模式实现四则计算器&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a</summary>
         
       
     

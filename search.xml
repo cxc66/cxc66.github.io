@@ -2034,29 +2034,38 @@ M             1000
 <blockquote>
 <p>1、I&nbsp;可以放在&nbsp;V&nbsp;(5) 和&nbsp;X&nbsp;(10) 的左边，来表示 4 和 9。<br>2、X&nbsp;可以放在&nbsp;L&nbsp;(50) 和&nbsp;C&nbsp;(100) 的左边，来表示 40 和&nbsp;90。&nbsp;<br>3、C&nbsp;可以放在&nbsp;D&nbsp;(500) 和&nbsp;M&nbsp;(1000) 的左边，来表示&nbsp;400 和&nbsp;900。</p>
 </blockquote>
-<h3 id="给定一个罗马数字，将其转换成整数。"><a href="#给定一个罗马数字，将其转换成整数。" class="headerlink" title="给定一个罗马数字，将其转换成整数。"></a>给定一个罗马数字，将其转换成整数。</h3><pre><code>示例&nbsp;1:
-
-输入:&nbsp;s = "III"
+<h3 id="给定一个罗马数字，将其转换成整数。"><a href="#给定一个罗马数字，将其转换成整数。" class="headerlink" title="给定一个罗马数字，将其转换成整数。"></a>给定一个罗马数字，将其转换成整数。</h3><p><strong>示例&nbsp;1:</strong></p>
+<blockquote>
+<pre><code>输入:&nbsp;s = "III"
 输出: 3
-示例&nbsp;2:
-
-输入:&nbsp;s = "IV"
+</code></pre>
+</blockquote>
+<p><strong>示例&nbsp;2:</strong>    </p>
+<blockquote>
+<pre><code>输入:&nbsp;s = "IV"
 输出: 4
-示例&nbsp;3:
-
-输入:&nbsp;s = "IX"
+</code></pre>
+</blockquote>
+<p><strong>示例&nbsp;3:</strong>    </p>
+<blockquote>
+<pre><code>输入:&nbsp;s = "IX"
 输出: 9
-示例&nbsp;4:
-
-输入:&nbsp;s = "LVIII"
+</code></pre>
+</blockquote>
+<p><strong>示例&nbsp;4:</strong>    </p>
+<blockquote>
+<pre><code>输入:&nbsp;s = "LVIII"
 输出: 58
 解释: L = 50, V= 5, III = 3.
-示例&nbsp;5:
-
-输入:&nbsp;s = "MCMXCIV"
+</code></pre>
+</blockquote>
+<p><strong>示例&nbsp;5:</strong>    </p>
+<blockquote>
+<pre><code>输入:&nbsp;s = "MCMXCIV"
 输出: 1994
 解释: M = 1000, CM = 900, XC = 90, IV = 4.
 </code></pre>
+</blockquote>
 <h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h3><blockquote>
 <p>1、1 &lt;= s.length &lt;= 15<br>2、s 仅含字符 (‘I’, ‘V’, ‘X’, ‘L’, ‘C’, ‘D’, ‘M’)<br>3、题目数据保证 s 是一个有效的罗马数字，且表示整数在范围 [1, 3999] 内<br>4、题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。<br>5、IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。<br>6、关于罗马数字的详尽书写规则，可以参考 罗马数字 - Mathematics 。</p>
 </blockquote>
@@ -2094,6 +2103,49 @@ M             1000
 </code></pre>
 <blockquote>
 <p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode.cn/problems/roman-to-integer">https://leetcode.cn/problems/roman-to-integer</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最长公共前缀</title>
+    <url>/2022/07/01/likou002/</url>
+    <content><![CDATA[<h2 id="最长公共前缀"><a href="#最长公共前缀" class="headerlink" title="最长公共前缀"></a>最长公共前缀</h2><p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
+<p>如果不存在公共前缀，返回空字符串 “”。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p>输入：strs = [“flower”,”flow”,”flight”]<br>输出：”fl”</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p>输入：strs = [“dog”,”racecar”,”car”]<br>输出：””<br>解释：输入不存在公共前缀。</p>
+</blockquote>
+<h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h3><blockquote>
+<p>1 &lt;= strs.length &lt;= 200<br>0 &lt;= strs[i].length &lt;= 200<br>strs[i] 仅由小写英文字母组成</p>
+</blockquote>
+<h2 id="java解答："><a href="#java解答：" class="headerlink" title="java解答："></a>java解答：</h2><pre><code>class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        if(strs.length==0)return "";
+        //公共前缀比所有字符串都短，随便选一个先
+        String s=strs[0];
+        for (String string : strs) {
+            while(!string.startsWith(s)){
+                if(s.length()==0)return "";
+                //公共前缀不匹配就让它变短！
+                s=s.substring(0,s.length()-1);
+            }
+        }
+        return s;
+    }
+}
+</code></pre>
+<blockquote>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode.cn/problems/longest-common-prefix">https://leetcode.cn/problems/longest-common-prefix</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
 ]]></content>
       <categories>
