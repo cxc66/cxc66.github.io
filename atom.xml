@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>chaos超</title>
   
-  <subtitle>努力成长  人生值得</subtitle>
+  <subtitle>学无止境</subtitle>
   <link href="https://cxc66.github.io/atom.xml" rel="self"/>
   
   <link href="https://cxc66.github.io/"/>
-  <updated>2022-05-06T01:57:22.927Z</updated>
+  <updated>2022-07-01T06:43:21.628Z</updated>
   <id>https://cxc66.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>开始刷题</title>
+    <link href="https://cxc66.github.io/2022/07/01/likou000/"/>
+    <id>https://cxc66.github.io/2022/07/01/likou000/</id>
+    <published>2022-07-01T11:25:45.000Z</published>
+    <updated>2022-07-01T06:43:21.628Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是Redis？&quot;&gt;&lt;a href=&quot;#什么是Redis？&quot; class=&quot;headerlink&quot; title=&quot;什么是Redis？&quot;&gt;&lt;/a&gt;什么是Redis？&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Redis 是一个使用 C</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="redis" scheme="https://cxc66.github.io/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>安卓app饮食健康</title>
     <link href="https://cxc66.github.io/2022/04/03/ruan-jian-00/"/>
     <id>https://cxc66.github.io/2022/04/03/ruan-jian-00/</id>
     <published>2022-04-03T15:25:45.000Z</published>
-    <updated>2022-05-06T01:57:22.927Z</updated>
+    <updated>2022-07-01T06:31:52.306Z</updated>
     
     
       
@@ -505,27 +533,6 @@
     
     
     <category term="设计模式" scheme="https://cxc66.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一次博客文章测试</title>
-    <link href="https://cxc66.github.io/2019/09/07/first/"/>
-    <id>https://cxc66.github.io/2019/09/07/first/</id>
-    <published>2019-09-07T01:25:00.000Z</published>
-    <updated>2022-04-05T10:17:23.243Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;This is my first time to</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
