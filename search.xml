@@ -2036,35 +2036,23 @@ M             1000
 </blockquote>
 <h3 id="给定一个罗马数字，将其转换成整数。"><a href="#给定一个罗马数字，将其转换成整数。" class="headerlink" title="给定一个罗马数字，将其转换成整数。"></a>给定一个罗马数字，将其转换成整数。</h3><p><strong>示例&nbsp;1:</strong></p>
 <blockquote>
-<pre><code>输入:&nbsp;s = "III"
-输出: 3
-</code></pre>
+<p>输入:&nbsp;s = “III”<br>输出: 3</p>
 </blockquote>
 <p><strong>示例&nbsp;2:</strong>    </p>
 <blockquote>
-<pre><code>输入:&nbsp;s = "IV"
-输出: 4
-</code></pre>
+<p>输入:&nbsp;s = “IV”<br>输出: 4</p>
 </blockquote>
 <p><strong>示例&nbsp;3:</strong>    </p>
 <blockquote>
-<pre><code>输入:&nbsp;s = "IX"
-输出: 9
-</code></pre>
+<p>输入:&nbsp;s = “IX”<br>输出: 9</p>
 </blockquote>
 <p><strong>示例&nbsp;4:</strong>    </p>
 <blockquote>
-<pre><code>输入:&nbsp;s = "LVIII"
-输出: 58
-解释: L = 50, V= 5, III = 3.
-</code></pre>
+<p>输入:&nbsp;s = “LVIII”<br>输出: 58<br>解释: L = 50, V= 5, III = 3.</p>
 </blockquote>
 <p><strong>示例&nbsp;5:</strong>    </p>
 <blockquote>
-<pre><code>输入:&nbsp;s = "MCMXCIV"
-输出: 1994
-解释: M = 1000, CM = 900, XC = 90, IV = 4.
-</code></pre>
+<p>输入:&nbsp;s = “MCMXCIV”<br>输出: 1994<br>解释: M = 1000, CM = 900, XC = 90, IV = 4.</p>
 </blockquote>
 <h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h3><blockquote>
 <p>1、1 &lt;= s.length &lt;= 15<br>2、s 仅含字符 (‘I’, ‘V’, ‘X’, ‘L’, ‘C’, ‘D’, ‘M’)<br>3、题目数据保证 s 是一个有效的罗马数字，且表示整数在范围 [1, 3999] 内<br>4、题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。<br>5、IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。<br>6、关于罗马数字的详尽书写规则，可以参考 罗马数字 - Mathematics 。</p>
