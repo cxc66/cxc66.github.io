@@ -5,12 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="罗马数字转整数, chaos超">
-    <meta name="description" content="罗马数字转整数罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
-
-        字符          数值
-        I             1
-        V             5
-       ">
+    <meta name="description" content="罗马数字转整数罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。字符          数值
+I             1
+V             5
+X             10
+L             50">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -496,24 +495,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="罗马数字转整数"><a href="#罗马数字转整数" class="headerlink" title="罗马数字转整数"></a>罗马数字转整数</h1><h2 id="罗马数字包含以下七种字符-I，-V，-X，-L，C，D-和-M。"><a href="#罗马数字包含以下七种字符-I，-V，-X，-L，C，D-和-M。" class="headerlink" title="罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。"></a>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</h2><blockquote>
-</blockquote>
-<pre><code>        字符          数值
-        I             1
-        V             5
-        X             10
-        L             50
-        C             100
-        D             500
-        M             1000
+                <h2 id="罗马数字转整数"><a href="#罗马数字转整数" class="headerlink" title="罗马数字转整数"></a>罗马数字转整数</h2><h3 id="罗马数字包含以下七种字符-I，-V，-X，-L，C，D-和-M。"><a href="#罗马数字包含以下七种字符-I，-V，-X，-L，C，D-和-M。" class="headerlink" title="罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。"></a>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</h3><pre><code>字符          数值
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
 </code></pre>
 <p>例如， 罗马数字 2 写做&nbsp;II&nbsp;，即为两个并列的 1 。12 写做&nbsp;XII&nbsp;，即为&nbsp;X&nbsp;+&nbsp;II&nbsp;。 27 写做&nbsp;&nbsp;XXVII, 即为&nbsp;XX&nbsp;+&nbsp;V&nbsp;+&nbsp;II&nbsp;。</p>
 <p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做&nbsp;IIII，而是&nbsp;IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为&nbsp;IX。这个特殊的规则只适用于以下六种情况：</p>
-<pre><code>I&nbsp;可以放在&nbsp;V&nbsp;(5) 和&nbsp;X&nbsp;(10) 的左边，来表示 4 和 9。
-X&nbsp;可以放在&nbsp;L&nbsp;(50) 和&nbsp;C&nbsp;(100) 的左边，来表示 40 和&nbsp;90。&nbsp;
-C&nbsp;可以放在&nbsp;D&nbsp;(500) 和&nbsp;M&nbsp;(1000) 的左边，来表示&nbsp;400 和&nbsp;900。
-</code></pre>
-<h2 id="给定一个罗马数字，将其转换成整数。"><a href="#给定一个罗马数字，将其转换成整数。" class="headerlink" title="给定一个罗马数字，将其转换成整数。"></a>给定一个罗马数字，将其转换成整数。</h2><pre><code>示例&nbsp;1:
+<blockquote>
+<p>1、I&nbsp;可以放在&nbsp;V&nbsp;(5) 和&nbsp;X&nbsp;(10) 的左边，来表示 4 和 9。<br>2、X&nbsp;可以放在&nbsp;L&nbsp;(50) 和&nbsp;C&nbsp;(100) 的左边，来表示 40 和&nbsp;90。&nbsp;<br>3、C&nbsp;可以放在&nbsp;D&nbsp;(500) 和&nbsp;M&nbsp;(1000) 的左边，来表示&nbsp;400 和&nbsp;900。</p>
+</blockquote>
+<h3 id="给定一个罗马数字，将其转换成整数。"><a href="#给定一个罗马数字，将其转换成整数。" class="headerlink" title="给定一个罗马数字，将其转换成整数。"></a>给定一个罗马数字，将其转换成整数。</h3><pre><code>示例&nbsp;1:
 
 输入:&nbsp;s = "III"
 输出: 3
@@ -536,14 +532,10 @@ C&nbsp;可以放在&nbsp;D&nbsp;(500) 和&nbsp;M&nbsp;(1000) 的左边，来表�
 输出: 1994
 解释: M = 1000, CM = 900, XC = 90, IV = 4.
 </code></pre>
-<h2 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h2><pre><code>1 &lt;= s.length &lt;= 15
-s 仅含字符 ('I', 'V', 'X', 'L', 'C', 'D', 'M')
-题目数据保证 s 是一个有效的罗马数字，且表示整数在范围 [1, 3999] 内
-题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。
-IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。
-关于罗马数字的详尽书写规则，可以参考 罗马数字 - Mathematics 。
-</code></pre>
-<h1 id="java解答："><a href="#java解答：" class="headerlink" title="java解答："></a>java解答：</h1><pre><code>class Solution {
+<h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h3><blockquote>
+<p>1、1 &lt;= s.length &lt;= 15<br>2、s 仅含字符 (‘I’, ‘V’, ‘X’, ‘L’, ‘C’, ‘D’, ‘M’)<br>3、题目数据保证 s 是一个有效的罗马数字，且表示整数在范围 [1, 3999] 内<br>4、题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。<br>5、IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。<br>6、关于罗马数字的详尽书写规则，可以参考 罗马数字 - Mathematics 。</p>
+</blockquote>
+<h2 id="java解答："><a href="#java解答：" class="headerlink" title="java解答："></a>java解答：</h2><pre><code>class Solution {
     public int romanToInt(String s) {
             int n = s.length();
             int roman_int = 0;
