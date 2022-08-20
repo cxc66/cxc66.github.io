@@ -2144,26 +2144,22 @@ M             1000
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/08/20/mybatis-de-yi-ji-er-ji-huan-cun/</url>
-    <content><![CDATA[<p>title:  Mybatis的一级、二级缓存<br>date: 2022-6-1 23:25:45<br>author: 超</p>
-<p>top: false<br>hide: false<br>cover: false<br>coverImg: /images/1.jpg<br>toc: false<br>mathjax: false<br>summary:<br>categories: JAVA<br>tags:</p>
-<ul>
-<li>面试</li>
-</ul>
-<p><strong>二级缓存：</strong>与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如 Ehcache。默认不打开二级缓存，要开启二级缓存，使用二级缓存属性类需要实现Serializable序列化接口(可用来保存对象的状态),可在它的映射文件中配置<code>&lt;cache/&gt;</code></p>
+    <title>Mybatis的一级、二级缓存</title>
+    <url>/2022/06/01/mybatis-de-yi-ji-er-ji-huan-cun/</url>
+    <content><![CDATA[<p><strong>二级缓存：</strong>与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如 Ehcache。默认不打开二级缓存，要开启二级缓存，使用二级缓存属性类需要实现Serializable序列化接口(可用来保存对象的状态),可在它的映射文件中配置<code>&lt;cache/&gt;</code></p>
 <p>对于缓存数据更新机制，当某一个作用域(一级缓存 Session/二级缓存Namespaces)的进行了C/U/D 操作后，默认该作用域下所有 select 中的缓存将被 clear。</p>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/08/20/rabbmq/</url>
-    <content><![CDATA[<p>title:  RabbitMQ基本概念<br>date: 2022-6-2 21:25:45<br>author: 超</p>
-<p>top: false<br>hide: false<br>cover: false<br>coverImg: /images/1.jpg<br>toc: false<br>mathjax: false<br>summary:<br>categories: JAVA<br>tags:</p>
-<ul>
-<li>面试</li>
-</ul>
-<h2 id="RabbitMQ基本概念"><a href="#RabbitMQ基本概念" class="headerlink" title="RabbitMQ基本概念"></a>RabbitMQ基本概念</h2><p><strong>Broker：</strong> 简单来说就是消息队列服务器实体</p>
+    <title>RabbitMQ基本概念</title>
+    <url>/2022/06/02/rabbmq/</url>
+    <content><![CDATA[<h2 id="RabbitMQ基本概念"><a href="#RabbitMQ基本概念" class="headerlink" title="RabbitMQ基本概念"></a>RabbitMQ基本概念</h2><p><strong>Broker：</strong> 简单来说就是消息队列服务器实体</p>
 <p><strong>Exchange：</strong> 消息交换机，它指定消息按什么规则，路由到哪个队列</p>
 <p><strong>Queue：</strong> 消息队列载体，每个消息都会被投入到一个或多个队列</p>
 <p><strong>Binding：</strong> 绑定，它的作用就是把exchange和queue按照路由规则绑定起来</p>
@@ -2189,10 +2185,16 @@ M             1000
 <p><strong>一致性问题</strong></p>
 <p>A 系统处理完了直接返回成功了，人都以为你这个请求就成功了；但是问题是，要是 BCD 三个系统那里，BD 两个系统写库成功了，结果 C 系统写库失败了，咋整？你这数据就不一致了。</p>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/08/20/spring-mvc/</url>
+    <title>Spring MVC的主要组件</title>
+    <url>/2022/06/11/spring-mvc/</url>
     <content><![CDATA[<h1 id="Spring-MVC的主要组件"><a href="#Spring-MVC的主要组件" class="headerlink" title="Spring MVC的主要组件"></a>Spring MVC的主要组件</h1><p>（1）前端控制器 DispatcherServlet（不需要程序员开发）</p>
 <ul>
 <li>作用：接收请求、响应结果，相当于转发器，有了DispatcherServlet 就减少了其它组件之间的耦合度。</li>
@@ -2227,16 +2229,17 @@ M             1000
 <p>（10）DispatcherServlet对View进行渲染视图（即将模型数据填充至视图中）</p>
 <p>（11）DispatcherServlet响应用户。</p>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/08/20/wang-luo-xie-yi/</url>
-    <content><![CDATA[<p>title:  TCP/IP和UDP<br>date: 2022-6-4 21:25:45<br>author: 超</p>
-<p>top: false<br>hide: false<br>cover: false<br>coverImg: /images/1.jpg<br>toc: false<br>mathjax: false<br>summary:<br>categories: JAVA<br>tags:</p>
-<ul>
-<li>面试</li>
-</ul>
-<h4 id="什么是TCP-x2F-IP和UDP"><a href="#什么是TCP-x2F-IP和UDP" class="headerlink" title="什么是TCP/IP和UDP"></a>什么是TCP/IP和UDP</h4><p>TCP/IP即传输控制/网络协议，是面向连接的协议，发送数据前要先建立连接(发送方和接收方的成对的两个之间必须建 立连接)，TCP提供可靠的服务，也就是说，通过TCP连接传输的数据不会丢失，没有重复，并且按顺序到达</p>
+    <title>TCP/IP和UDP</title>
+    <url>/2022/06/04/wang-luo-xie-yi/</url>
+    <content><![CDATA[<h4 id="什么是TCP-x2F-IP和UDP"><a href="#什么是TCP-x2F-IP和UDP" class="headerlink" title="什么是TCP/IP和UDP"></a>什么是TCP/IP和UDP</h4><p>TCP/IP即传输控制/网络协议，是面向连接的协议，发送数据前要先建立连接(发送方和接收方的成对的两个之间必须建 立连接)，TCP提供可靠的服务，也就是说，通过TCP连接传输的数据不会丢失，没有重复，并且按顺序到达</p>
 <p>UDP它是属于TCP/IP协议族中的一种。是无连接的协议，发送数据前不需要建立连接，是没有可靠性的协议。因为不需要建立连接所以可以在在网络上以任何可能的路径传输，因此能否到达目的地，到达目的地的时间以及内容的正确性都是不能被保证的。</p>
 <h4 id="TCP与UDP区别："><a href="#TCP与UDP区别：" class="headerlink" title="TCP与UDP区别："></a>TCP与UDP区别：</h4><p>TCP是面向连接的协议，发送数据前要先建立连接，TCP提供可靠的服务，也就是说，通过TCP连接传输的数据不会丢失，没有重复，并且按顺序到达；</p>
 <p>UDP是无连接的协议，发送数据前不需要建立连接，是没有可靠性；</p>
@@ -2247,16 +2250,17 @@ M             1000
 <p>TCP首部开销（20字节）比UDP首部开销（8字节）要大</p>
 <p>UDP 的主机不需要维持复杂的连接状态表</p>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/08/20/spring/</url>
-    <content><![CDATA[<p>title:  Spring框架中bean的生命周期<br>date: 2022-6-10 21:25:45<br>author: 超</p>
-<p>top: false<br>hide: false<br>cover: false<br>coverImg: /images/1.jpg<br>toc: false<br>mathjax: false<br>summary:<br>categories: JAVA<br>tags:</p>
-<ul>
-<li>面试</li>
-</ul>
-<h3 id="Spring框架中bean的生命周期"><a href="#Spring框架中bean的生命周期" class="headerlink" title="Spring框架中bean的生命周期"></a>Spring框架中bean的生命周期</h3><p>Spring对bean进行实例化；</p>
+    <title>Spring框架中bean的生命周期</title>
+    <url>/2022/06/10/spring/</url>
+    <content><![CDATA[<h3 id="Spring框架中bean的生命周期"><a href="#Spring框架中bean的生命周期" class="headerlink" title="Spring框架中bean的生命周期"></a>Spring框架中bean的生命周期</h3><p>Spring对bean进行实例化；</p>
 <p>Spring将值和bean的引用注入到bean对应的属性中；</p>
 <p>如果bean实现了BeanNameAware接口，Spring将bean的ID传递给setBean-Name()方法；</p>
 <p>如果bean实现了BeanFactoryAware接口，Spring将调用setBeanFactory()方法，将BeanFactory容器实例传入；</p>
@@ -2267,5 +2271,11 @@ M             1000
 <p>此时，bean已经准备就绪，可以被应用程序使用了，它们将一直驻留在应用上下文中，直到该应用上下文被销毁；</p>
 <p>如果bean实现了DisposableBean接口，Spring将调用它的destroy()接口方法。同样，如果bean使用destroy-method声明了销毁方法，该方法也会被调用。</p>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
   </entry>
 </search>

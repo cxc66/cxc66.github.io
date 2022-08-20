@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="chaos超">
-    <meta name="description" content="title:  TCP/IP和UDPdate: 2022-6-4 21:25:45author: 超
-top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
+    <meta name="keywords" content="Spring框架中bean的生命周期, chaos超">
+    <meta name="description" content="Spring框架中bean的生命周期Spring对bean进行实例化；
+Spring将值和bean的引用注入到bean对应的属性中；
+如果bean实现了BeanNameAware接口，Spring将bean的ID传递给setBean-Nam">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +30,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
     </style>
 
 
-    <title>chaos超</title>
+    <title>Spring框架中bean的生命周期 | chaos超</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -322,12 +323,12 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Spring框架中bean的生命周期</h1>
                 </div>
             </div>
         </div>
@@ -337,116 +338,35 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JAVA/" class="post-category">
+                                JAVA
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -455,7 +375,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-20
+                    2022-06-10
                 </div>
                 
 
@@ -479,21 +399,16 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title:  TCP/IP和UDP<br>date: 2022-6-4 21:25:45<br>author: 超</p>
-<p>top: false<br>hide: false<br>cover: false<br>coverImg: /images/1.jpg<br>toc: false<br>mathjax: false<br>summary:<br>categories: JAVA<br>tags:</p>
-<ul>
-<li>面试</li>
-</ul>
-<h4 id="什么是TCP-x2F-IP和UDP"><a href="#什么是TCP-x2F-IP和UDP" class="headerlink" title="什么是TCP/IP和UDP"></a>什么是TCP/IP和UDP</h4><p>TCP/IP即传输控制/网络协议，是面向连接的协议，发送数据前要先建立连接(发送方和接收方的成对的两个之间必须建 立连接)，TCP提供可靠的服务，也就是说，通过TCP连接传输的数据不会丢失，没有重复，并且按顺序到达</p>
-<p>UDP它是属于TCP/IP协议族中的一种。是无连接的协议，发送数据前不需要建立连接，是没有可靠性的协议。因为不需要建立连接所以可以在在网络上以任何可能的路径传输，因此能否到达目的地，到达目的地的时间以及内容的正确性都是不能被保证的。</p>
-<h4 id="TCP与UDP区别："><a href="#TCP与UDP区别：" class="headerlink" title="TCP与UDP区别："></a>TCP与UDP区别：</h4><p>TCP是面向连接的协议，发送数据前要先建立连接，TCP提供可靠的服务，也就是说，通过TCP连接传输的数据不会丢失，没有重复，并且按顺序到达；</p>
-<p>UDP是无连接的协议，发送数据前不需要建立连接，是没有可靠性；</p>
-<p>TCP通信类似于于要打个电话，接通了，确认身份后，才开始进行通行；</p>
-<p>UDP通信类似于学校广播，靠着广播播报直接进行通信。</p>
-<p>TCP只支持点对点通信，UDP支持一对一、一对多、多对一、多对多；</p>
-<p>TCP是面向字节流的，UDP是面向报文的； 面向字节流是指发送数据时以字节为单位，一个数据包可以拆分成若干组进行发送，而UDP一个报文只能一次发完。</p>
-<p>TCP首部开销（20字节）比UDP首部开销（8字节）要大</p>
-<p>UDP 的主机不需要维持复杂的连接状态表</p>
+                <h3 id="Spring框架中bean的生命周期"><a href="#Spring框架中bean的生命周期" class="headerlink" title="Spring框架中bean的生命周期"></a>Spring框架中bean的生命周期</h3><p>Spring对bean进行实例化；</p>
+<p>Spring将值和bean的引用注入到bean对应的属性中；</p>
+<p>如果bean实现了BeanNameAware接口，Spring将bean的ID传递给setBean-Name()方法；</p>
+<p>如果bean实现了BeanFactoryAware接口，Spring将调用setBeanFactory()方法，将BeanFactory容器实例传入；</p>
+<p>如果bean实现了ApplicationContextAware接口，Spring将调用setApplicationContext()方法，将bean所在的应用上下文的引用传入进来；</p>
+<p>如果bean实现了BeanPostProcessor接口，Spring将调用它们的post-ProcessBeforeInitialization()方法；</p>
+<p>如果bean实现了InitializingBean接口，Spring将调用它们的after-PropertiesSet()方法。类似地，如果bean使用initmethod声明了初始化方法，该方法也会被调用；</p>
+<p>如果bean实现了BeanPostProcessor接口，Spring将调用它们的post-ProcessAfterInitialization()方法；</p>
+<p>此时，bean已经准备就绪，可以被应用程序使用了，它们将一直驻留在应用上下文中，直到该应用上下文被销毁；</p>
+<p>如果bean实现了DisposableBean接口，Spring将调用它的destroy()接口方法。同样，如果bean使用destroy-method声明了销毁方法，该方法也会被调用。</p>
 
                 
             </div>
@@ -510,7 +425,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">chaos小超</a>
+                    <a href="/about" rel="external nofollow noreferrer">超</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -520,7 +435,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cxc66.github.io/2022/08/20/wang-luo-xie-yi/">https://cxc66.github.io/2022/08/20/wang-luo-xie-yi/</a>
+                    <a href="https://cxc66.github.io/2022/06/10/spring/">https://cxc66.github.io/2022/06/10/spring/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,7 +448,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">chaos小超</a>
+                    <a href="/about" target="_blank">超</a>
                     !
                 </span>
             </div>
@@ -557,7 +472,11 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -733,13 +652,13 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/08/20/rabbmq/">
+                <a href="/2022/06/11/spring-mvc/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Spring MVC的主要组件">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Spring MVC的主要组件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -750,15 +669,27 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-11
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            chaos小超
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -770,13 +701,13 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/20/mybatis-de-yi-ji-er-ji-huan-cun/">
+                <a href="/2022/06/04/wang-luo-xie-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="TCP/IP和UDP">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">TCP/IP和UDP</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -787,15 +718,27 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-04
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            chaos小超
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -825,87 +768,6 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsemat">
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 

@@ -6,7 +6,7 @@
   <link href="https://cxc66.github.io/atom.xml" rel="self"/>
   
   <link href="https://cxc66.github.io/"/>
-  <updated>2022-08-20T13:25:45.351Z</updated>
+  <updated>2022-07-01T15:27:52.957Z</updated>
   <id>https://cxc66.github.io/</id>
   
   <author>
@@ -15,115 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://cxc66.github.io/2022/08/20/spring/"/>
-    <id>https://cxc66.github.io/2022/08/20/spring/</id>
-    <published>2022-08-20T13:23:18.380Z</published>
-    <updated>2022-08-20T13:25:45.351Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;title:  Spring框架中bean的生命周期&lt;br&gt;date: 2022-6-10 21:25:45&lt;br&gt;author: 超&lt;/p&gt;
-&lt;p&gt;top: false&lt;br&gt;hide: false&lt;br&gt;cover: false&lt;br&gt;coverImg:</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://cxc66.github.io/2022/08/20/spring-mvc/"/>
-    <id>https://cxc66.github.io/2022/08/20/spring-mvc/</id>
-    <published>2022-08-20T13:23:18.376Z</published>
-    <updated>2022-07-22T02:03:16.468Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Spring-MVC的主要组件&quot;&gt;&lt;a href=&quot;#Spring-MVC的主要组件&quot; class=&quot;headerlink&quot; title=&quot;Spring MVC的主要组件&quot;&gt;&lt;/a&gt;Spring MVC的主要组件&lt;/h1&gt;&lt;p&gt;（1）前端控制器</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://cxc66.github.io/2022/08/20/rabbmq/"/>
-    <id>https://cxc66.github.io/2022/08/20/rabbmq/</id>
-    <published>2022-08-20T13:23:18.372Z</published>
-    <updated>2022-08-20T13:25:14.953Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;title:  RabbitMQ基本概念&lt;br&gt;date: 2022-6-2 21:25:45&lt;br&gt;author: 超&lt;/p&gt;
-&lt;p&gt;top: false&lt;br&gt;hide: false&lt;br&gt;cover: false&lt;br&gt;coverImg:</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://cxc66.github.io/2022/08/20/wang-luo-xie-yi/"/>
-    <id>https://cxc66.github.io/2022/08/20/wang-luo-xie-yi/</id>
-    <published>2022-08-20T13:23:18.366Z</published>
-    <updated>2022-08-20T13:26:23.097Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;title:  TCP/IP和UDP&lt;br&gt;date: 2022-6-4 21:25:45&lt;br&gt;author: 超&lt;/p&gt;
-&lt;p&gt;top: false&lt;br&gt;hide: false&lt;br&gt;cover: false&lt;br&gt;coverImg:</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://cxc66.github.io/2022/08/20/mybatis-de-yi-ji-er-ji-huan-cun/"/>
-    <id>https://cxc66.github.io/2022/08/20/mybatis-de-yi-ji-er-ji-huan-cun/</id>
-    <published>2022-08-20T13:23:18.258Z</published>
-    <updated>2022-08-20T13:24:31.438Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;title:  Mybatis的一级、二级缓存&lt;br&gt;date: 2022-6-1 23:25:45&lt;br&gt;author: 超&lt;/p&gt;
-&lt;p&gt;top: false&lt;br&gt;hide: false&lt;br&gt;cover: false&lt;br&gt;coverImg:</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>最长公共前缀</title>
@@ -198,6 +89,131 @@
     
     
     <category term="JAVA面试题" scheme="https://cxc66.github.io/tags/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring MVC的主要组件</title>
+    <link href="https://cxc66.github.io/2022/06/11/spring-mvc/"/>
+    <id>https://cxc66.github.io/2022/06/11/spring-mvc/</id>
+    <published>2022-06-11T13:25:45.000Z</published>
+    <updated>2022-08-20T13:47:53.758Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Spring-MVC的主要组件&quot;&gt;&lt;a href=&quot;#Spring-MVC的主要组件&quot; class=&quot;headerlink&quot; title=&quot;Spring MVC的主要组件&quot;&gt;&lt;/a&gt;Spring MVC的主要组件&lt;/h1&gt;&lt;p&gt;（1）前端控制器</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="面试" scheme="https://cxc66.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring框架中bean的生命周期</title>
+    <link href="https://cxc66.github.io/2022/06/10/spring/"/>
+    <id>https://cxc66.github.io/2022/06/10/spring/</id>
+    <published>2022-06-10T13:25:45.000Z</published>
+    <updated>2022-08-20T13:46:39.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Spring框架中bean的生命周期&quot;&gt;&lt;a href=&quot;#Spring框架中bean的生命周期&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="面试" scheme="https://cxc66.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TCP/IP和UDP</title>
+    <link href="https://cxc66.github.io/2022/06/04/wang-luo-xie-yi/"/>
+    <id>https://cxc66.github.io/2022/06/04/wang-luo-xie-yi/</id>
+    <published>2022-06-04T13:25:45.000Z</published>
+    <updated>2022-08-20T13:47:07.599Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;什么是TCP-x2F-IP和UDP&quot;&gt;&lt;a href=&quot;#什么是TCP-x2F-IP和UDP&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="面试" scheme="https://cxc66.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RabbitMQ基本概念</title>
+    <link href="https://cxc66.github.io/2022/06/02/rabbmq/"/>
+    <id>https://cxc66.github.io/2022/06/02/rabbmq/</id>
+    <published>2022-06-02T13:25:45.000Z</published>
+    <updated>2022-08-20T13:46:22.875Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;RabbitMQ基本概念&quot;&gt;&lt;a href=&quot;#RabbitMQ基本概念&quot; class=&quot;headerlink&quot; title=&quot;RabbitMQ基本概念&quot;&gt;&lt;/a&gt;RabbitMQ基本概念&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Broker：&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="面试" scheme="https://cxc66.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis的一级、二级缓存</title>
+    <link href="https://cxc66.github.io/2022/06/01/mybatis-de-yi-ji-er-ji-huan-cun/"/>
+    <id>https://cxc66.github.io/2022/06/01/mybatis-de-yi-ji-er-ji-huan-cun/</id>
+    <published>2022-06-01T15:25:45.000Z</published>
+    <updated>2022-08-20T13:45:45.109Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;二级缓存：&lt;/strong&gt;与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如</summary>
+        
+      
+    
+    
+    
+    <category term="JAVA" scheme="https://cxc66.github.io/categories/JAVA/"/>
+    
+    
+    <category term="面试" scheme="https://cxc66.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   

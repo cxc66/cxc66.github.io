@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="chaos超">
-    <meta name="description" content="title:  RabbitMQ基本概念date: 2022-6-2 21:25:45author: 超
-top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
+    <meta name="keywords" content="Mybatis的一级、二级缓存, chaos超">
+    <meta name="description" content="二级缓存：与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如 Ehcache。默认不打开二级缓存，要开启二级缓存，使用二">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +28,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
     </style>
 
 
-    <title>chaos超</title>
+    <title>Mybatis的一级、二级缓存 | chaos超</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -322,12 +321,12 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Mybatis的一级、二级缓存</h1>
                 </div>
             </div>
         </div>
@@ -337,116 +336,35 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JAVA/" class="post-category">
+                                JAVA
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -455,7 +373,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-20
+                    2022-06-01
                 </div>
                 
 
@@ -479,36 +397,8 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>title:  RabbitMQ基本概念<br>date: 2022-6-2 21:25:45<br>author: 超</p>
-<p>top: false<br>hide: false<br>cover: false<br>coverImg: /images/1.jpg<br>toc: false<br>mathjax: false<br>summary:<br>categories: JAVA<br>tags:</p>
-<ul>
-<li>面试</li>
-</ul>
-<h2 id="RabbitMQ基本概念"><a href="#RabbitMQ基本概念" class="headerlink" title="RabbitMQ基本概念"></a>RabbitMQ基本概念</h2><p><strong>Broker：</strong> 简单来说就是消息队列服务器实体</p>
-<p><strong>Exchange：</strong> 消息交换机，它指定消息按什么规则，路由到哪个队列</p>
-<p><strong>Queue：</strong> 消息队列载体，每个消息都会被投入到一个或多个队列</p>
-<p><strong>Binding：</strong> 绑定，它的作用就是把exchange和queue按照路由规则绑定起来</p>
-<p><strong>Routing Key：</strong> 路由关键字，exchange根据这个关键字进行消息投递</p>
-<p><strong>VHost：</strong> vhost 可以理解为虚拟 broker ，即 mini-RabbitMQ server。其内部均含有独立的 queue、exchange 和 binding 等，但最最重要的是，其拥有独立的权限系统，可以做到 vhost 范围的用户控制。当然，从 RabbitMQ 的全局角度，vhost 可以作为不同权限隔离的手段（一个典型的例子就是不同的应用可以跑在不同的 vhost 中）。</p>
-<p><strong>Producer：</strong> 消息生产者，就是投递消息的程序</p>
-<p><strong>Consumer：</strong> 消息消费者，就是接受消息的程序</p>
-<p><strong>Channel：</strong> 消息通道，在客户端的每个连接里，可建立多个channel，每个channel代表一个会话任务</p>
-<h2 id="MQ的优点"><a href="#MQ的优点" class="headerlink" title="MQ的优点"></a>MQ的优点</h2><p>异步处理 - 相比于传统的串行、并行方式，提高了系统吞吐量。</p>
-<p>应用解耦 - 系统间通过消息通信，不用关心其他系统的处理。</p>
-<p>流量削锋 - 可以通过消息队列长度控制请求量；可以缓解短时间内的高并发请求。</p>
-<p>日志处理 - 解决大量日志传输。</p>
-<p>消息通讯 - 消息队列一般都内置了高效的通信机制，因此也可以用在纯的消息通讯。比如实现点对点消息队列，或者聊天室等。</p>
-<h2 id="解耦、异步、削峰是什么？"><a href="#解耦、异步、削峰是什么？" class="headerlink" title="解耦、异步、削峰是什么？"></a>解耦、异步、削峰是什么？</h2><p><strong>解耦</strong>：A 系统发送数据到 BCD 三个系统，通过接口调用发送。如果 E 系统也要这个数据呢？那如果 C 系统现在不需要了呢？A 系统负责人几乎崩溃…A 系统跟其它各种乱七八糟的系统严重耦合，A 系统产生一条比较关键的数据，很多系统都需要 A 系统将这个数据发送过来。如果使用 MQ，A 系统产生一条数据，发送到 MQ 里面去，哪个系统需要数据自己去 MQ 里面消费。如果新系统需要数据，直接从 MQ 里消费即可；如果某个系统不需要这条数据了，就取消对 MQ 消息的消费即可。这样下来，A 系统压根儿不需要去考虑要给谁发送数据，不需要维护这个代码，也不需要考虑人家是否调用成功、失败超时等情况。</p>
-<pre class="line-numbers language-none"><code class="language-none">就是一个系统或者一个模块，调用了多个系统或者模块，互相之间的调用很复杂，维护起来很麻烦。但是其实这个调用是不需要直接同步调用接口的，如果用 MQ 给它异步化解耦。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>异步</strong>：A 系统接收一个请求，需要在自己本地写库，还需要在 BCD 三个系统写库，自己本地写库要 3ms，BCD 三个系统分别写库要 300ms、450ms、200ms。最终请求总延时是 3 + 300 + 450 + 200 = 953ms，接近 1s，用户感觉搞个什么东西，慢死了慢死了。用户通过浏览器发起请求。如果使用 MQ，那么 A 系统连续发送 3 条消息到 MQ 队列中，假如耗时 5ms，A 系统从接受一个请求到返回响应给用户，总时长是 3 + 5 = 8ms。</p>
-<p><strong>削峰</strong>：减少高峰时期对服务器压力。</p>
-<h2 id="消息队列有什么缺点"><a href="#消息队列有什么缺点" class="headerlink" title="消息队列有什么缺点"></a>消息队列有什么缺点</h2><p><strong>系统可用性降低</strong></p>
-<p>本来系统运行好好的，现在你非要加入个消息队列进去，那消息队列挂了，你的系统不是呵呵了。因此，系统可用性会降低；</p>
-<p><strong>系统复杂度提高</strong></p>
-<p>加入了消息队列，要多考虑很多方面的问题，比如：一致性问题、如何保证消息不被重复消费、如何保证消息可靠性传输等。因此，需要考虑的东西更多，复杂性增大。</p>
-<p><strong>一致性问题</strong></p>
-<p>A 系统处理完了直接返回成功了，人都以为你这个请求就成功了；但是问题是，要是 BCD 三个系统那里，BD 两个系统写库成功了，结果 C 系统写库失败了，咋整？你这数据就不一致了。</p>
+                <p><strong>二级缓存：</strong>与一级缓存其机制相同，默认也是采用 PerpetualCache，HashMap 存储，不同在于其存储作用域为 Mapper(Namespace)，并且可自定义存储源，如 Ehcache。默认不打开二级缓存，要开启二级缓存，使用二级缓存属性类需要实现Serializable序列化接口(可用来保存对象的状态),可在它的映射文件中配置<code>&lt;cache/&gt;</code></p>
+<p>对于缓存数据更新机制，当某一个作用域(一级缓存 Session/二级缓存Namespaces)的进行了C/U/D 操作后，默认该作用域下所有 select 中的缓存将被 clear。</p>
 
                 
             </div>
@@ -525,7 +415,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">chaos小超</a>
+                    <a href="/about" rel="external nofollow noreferrer">超</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -535,7 +425,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cxc66.github.io/2022/08/20/rabbmq/">https://cxc66.github.io/2022/08/20/rabbmq/</a>
+                    <a href="https://cxc66.github.io/2022/06/01/mybatis-de-yi-ji-er-ji-huan-cun/">https://cxc66.github.io/2022/06/01/mybatis-de-yi-ji-er-ji-huan-cun/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,7 +438,7 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">chaos小超</a>
+                    <a href="/about" target="_blank">超</a>
                     !
                 </span>
             </div>
@@ -572,7 +462,11 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -748,13 +642,13 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/08/20/spring-mvc/">
+                <a href="/2022/06/02/rabbmq/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="RabbitMQ基本概念">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">RabbitMQ基本概念</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -765,15 +659,27 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-02
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            chaos小超
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -785,32 +691,44 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/20/wang-luo-xie-yi/">
+                <a href="/2022/04/03/ruan-jian-00/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="安卓app饮食健康">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">安卓app饮食健康</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            饮食健康app是自己尝试做的一款是安卓app，只实现了简单的页面浏览列表功能.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-03
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            chaos小超
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AE%89%E5%8D%93APP/" class="post-category">
+                                    安卓APP
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AE%89%E5%8D%93APP/">
+                        <span class="chip bg-color">安卓APP</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -840,87 +758,6 @@ top: falsehide: falsecover: falsecoverImg: /images/1.jpgtoc: falsem">
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 
